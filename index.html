@@ -1,0 +1,3477 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Kumo &amp; Matcha Studio — Pastel Premium Shop Profile &amp; Reviews</title>
+
+  <!-- Google Fonts: Prompt, DM Sans, Plus Jakarta Sans & Google Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pastel: {
+              pink: '#F5A6C1',
+              softPink: '#F9DCE7',
+              babyPink: '#FFD8E8',
+              lavender: '#CDBFF5',
+              lightPurple: '#E8E1FA',
+              babyBlue: '#C6DFF8',
+              mint: '#D2EEE2',
+              cream: '#FFFAF8',
+              text: '#29263B',
+              subtext: '#9692A5',
+              border: '#F0E8F0',
+            }
+          },
+          fontFamily: {
+            prompt: ['Prompt', 'sans-serif'],
+            dm: ['DM Sans', 'sans-serif'],
+            jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            'pastel-sm': '0 6px 20px -4px rgba(245, 166, 193, 0.16), 0 2px 8px -2px rgba(41, 38, 59, 0.04)',
+            'pastel-md': '0 14px 36px -8px rgba(205, 191, 245, 0.24), 0 4px 14px -2px rgba(245, 166, 193, 0.14)',
+            'pastel-lg': '0 22px 50px -12px rgba(205, 191, 245, 0.30), 0 8px 24px -6px rgba(41, 38, 59, 0.06)',
+            'fab-blue': '0 12px 28px -4px rgba(152, 199, 245, 0.65), 0 4px 14px rgba(198, 223, 248, 0.7)',
+            'neu-pill': 'inset 0 2px 5px rgba(255,255,255,0.95), 0 10px 26px -6px rgba(245, 166, 193, 0.28)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* =========================================================================
+       1. DESIGN SYSTEM TOKENS & PASTEL GLASSMORPHISM SURFACES
+       ========================================================================= */
+    :root {
+      --pastel-pink: #F5A6C1;
+      --soft-pink: #F9DCE7;
+      --baby-pink: #FFD8E8;
+      --lavender: #CDBFF5;
+      --light-purple: #E8E1FA;
+      --baby-blue: #C6DFF8;
+      --mint-green: #D2EEE2;
+      --cream-white: #FFFAF8;
+      --primary-text: #29263B;
+      --secondary-text: #9692A5;
+      --border-pastel: #F0E8F0;
+      --spring-bouncy: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      font-size: 15px;
+    }
+
+    @media (min-width: 640px) {
+      html {
+        font-size: 16px;
+      }
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      background-color: var(--cream-white);
+      color: var(--primary-text);
+      font-family: 'Prompt', 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .font-num {
+      font-family: 'DM Sans', 'Plus Jakarta Sans', sans-serif;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .material-symbols-rounded {
+      font-family: 'Material Symbols Rounded';
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+      vertical-align: middle;
+    }
+
+    .g-icon-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* Frosted Glassmorphism Card Surfaces */
+    .glass-card {
+      background: rgba(255, 250, 248, 0.80);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.94);
+      box-shadow: 0 14px 36px -8px rgba(205, 191, 245, 0.22), 0 4px 14px -2px rgba(245, 166, 193, 0.12);
+    }
+
+    .glass-lavender {
+      background: linear-gradient(145deg, rgba(248, 245, 255, 0.90) 0%, rgba(232, 225, 250, 0.78) 55%, rgba(205, 191, 245, 0.55) 100%);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.94);
+    }
+
+    .glass-pink {
+      background: linear-gradient(145deg, rgba(255, 245, 250, 0.90) 0%, rgba(249, 220, 231, 0.78) 55%, rgba(255, 216, 232, 0.65) 100%);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.94);
+    }
+
+    .glass-blue-mint {
+      background: linear-gradient(145deg, rgba(242, 249, 255, 0.90) 0%, rgba(198, 223, 248, 0.72) 55%, rgba(210, 238, 226, 0.68) 100%);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.94);
+    }
+
+    /* True 1:1 Square Cards for Total Reviews & Star Rating */
+    .stat-square-card {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+    }
+
+    .glass-pill-nav {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(240, 232, 240, 0.96);
+      box-shadow: 0 16px 40px -6px rgba(41, 38, 59, 0.12), 0 6px 20px -4px rgba(245, 166, 193, 0.26);
+    }
+
+    .rating-pill-glass {
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 2px solid #F5A6C1;
+      border-radius: 9999px;
+      box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.95), 0 10px 26px -6px rgba(245, 166, 193, 0.30);
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .progress-ring-circle {
+      transition: stroke-dashoffset 0.85s var(--ease-smooth);
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+
+    /* =========================================================================
+       2. CUTE & BOUNCY ANIMATION SYSTEM
+       ========================================================================= */
+    @keyframes orbDrift {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      33% { transform: translate3d(18px, -22px, 0) scale(1.04); }
+      66% { transform: translate3d(-14px, 14px, 0) scale(0.97); }
+    }
+    @keyframes floatGentle {
+      0%, 100% { transform: translateY(0) rotate(-3deg) scale(1); }
+      50% { transform: translateY(-4px) rotate(4deg) scale(1.08); }
+    }
+    @keyframes twinkleBounce {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.92; }
+      50% { transform: scale(1.22) rotate(12deg); opacity: 1; }
+    }
+    @keyframes swayFlower {
+      0%, 100% { transform: rotate(-7deg) translateY(0); }
+      50% { transform: rotate(8deg) translateY(-2px); }
+    }
+    @keyframes gentleBob {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-5px) scale(1.02); }
+    }
+
+    .orb-1 { animation: orbDrift 15s ease-in-out infinite; }
+    .orb-2 { animation: orbDrift 18s ease-in-out infinite reverse; }
+    .orb-3 { animation: orbDrift 21s ease-in-out infinite; }
+
+    .float-gentle {
+      display: inline-flex;
+      animation: floatGentle 2.8s ease-in-out infinite;
+    }
+    .twinkle-bounce {
+      display: inline-flex;
+      animation: twinkleBounce 2.4s ease-in-out infinite;
+    }
+    .sway-flower {
+      display: inline-flex;
+      transform-origin: 50% 80%;
+      animation: swayFlower 3.2s ease-in-out infinite;
+    }
+    .gentle-bob {
+      animation: gentleBob 3.6s ease-in-out infinite;
+    }
+
+    @keyframes pastelGradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .cute-gradient-flow {
+      background-size: 200% 200%;
+      animation: pastelGradientFlow 5s ease infinite;
+    }
+
+    .cute-btn {
+      transition:
+        transform 0.35s var(--spring-bouncy),
+        box-shadow 0.28s ease,
+        background-color 0.22s ease,
+        border-color 0.22s ease,
+        opacity 0.2s ease;
+      will-change: transform;
+    }
+    .cute-btn:not(:disabled):hover {
+      transform: translateY(-2.5px) scale(1.035);
+      box-shadow: 0 10px 26px -4px rgba(245, 166, 193, 0.42), 0 4px 12px rgba(205, 191, 245, 0.28);
+    }
+    .cute-btn:not(:disabled):active {
+      transform: translateY(1px) scale(0.93);
+      transition-duration: 0.09s;
+    }
+    .cute-btn:not(:disabled) svg,
+    .cute-btn:not(:disabled) .btn-icon,
+    .cute-btn:not(:disabled) .material-symbols-rounded {
+      transition: transform 0.35s var(--spring-bouncy);
+    }
+    .cute-btn:not(:disabled):hover svg,
+    .cute-btn:not(:disabled):hover .btn-icon,
+    .cute-btn:not(:disabled):hover .material-symbols-rounded {
+      transform: rotate(-8deg) scale(1.14);
+    }
+
+    .pastel-hover {
+      transition: transform 0.32s var(--spring-bouncy), box-shadow 0.28s ease;
+    }
+    .pastel-hover:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Interactive Rating Selector Animations */
+    @keyframes numberPop {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.28) rotate(-4deg); }
+      72% { transform: scale(0.94) rotate(2deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+    @keyframes pillSquash {
+      0% { transform: scale(1, 1); }
+      35% { transform: scale(0.95, 1.04); }
+      70% { transform: scale(1.02, 0.98); }
+      100% { transform: scale(1, 1); }
+    }
+    @keyframes stepperBounce {
+      0% { transform: scale(1); }
+      35% { transform: scale(0.84); }
+      70% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+    @keyframes ringPulse {
+      0% { box-shadow: 0 0 0 0 rgba(245, 166, 193, 0.70); }
+      70% { box-shadow: 0 0 0 13px rgba(245, 166, 193, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(245, 166, 193, 0); }
+    }
+    @keyframes floatSparkleParticle {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 4px, 0) scale(0.45) rotate(0deg);
+      }
+      30% {
+        opacity: 1;
+        transform: translate3d(var(--tx), -12px, 0) scale(1.15) rotate(22deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translate3d(calc(var(--tx) * 1.65), -32px, 0) scale(0.5) rotate(55deg);
+      }
+    }
+
+    .animate-number-pop {
+      animation: numberPop 0.40s var(--spring-bouncy) forwards;
+    }
+    .animate-pill-squash {
+      animation: pillSquash 0.36s var(--spring-bouncy) forwards;
+    }
+    .animate-stepper-bounce {
+      animation: stepperBounce 0.36s var(--spring-bouncy), ringPulse 0.48s ease-out;
+    }
+    .rating-sparkle-particle {
+      position: absolute;
+      pointer-events: none;
+      font-size: 14px;
+      animation: floatSparkleParticle 0.78s var(--ease-smooth) forwards;
+      z-index: 30;
+    }
+
+    /* Review Card & Star Pop Animations */
+    @keyframes reviewCardEnter {
+      0% { opacity: 0; transform: translateY(16px) scale(0.985); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes starPop {
+      0% { opacity: 0; transform: scale(0.3) rotate(-25deg); }
+      70% { opacity: 1; transform: scale(1.25) rotate(8deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    @keyframes newReviewGlow {
+      0%, 100% { box-shadow: 0 10px 28px -6px rgba(245, 166, 193, 0.38), 0 0 0 2px rgba(245, 166, 193, 0.45); }
+      50% { box-shadow: 0 14px 36px -4px rgba(205, 191, 245, 0.52), 0 0 0 3px rgba(205, 191, 245, 0.65); }
+    }
+
+    .review-card-item {
+      opacity: 0;
+      animation: reviewCardEnter 0.44s var(--ease-smooth) forwards;
+      transition: transform 0.32s var(--spring-bouncy), box-shadow 0.3s ease, background-color 0.25s ease;
+    }
+    .review-card-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 38px -10px rgba(205, 191, 245, 0.34), 0 6px 18px -4px rgba(245, 166, 193, 0.22);
+    }
+    .star-pop-item {
+      display: inline-flex;
+      animation: starPop 0.4s var(--spring-bouncy) backwards;
+    }
+    .new-review-sparkle {
+      animation: reviewCardEnter 0.44s var(--ease-smooth) forwards, newReviewGlow 2.8s ease-in-out infinite;
+    }
+
+    /* Ambient Rising Hearts & Pastel Confetti */
+    @keyframes ambientRise {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0) scale(0.7) rotate(-8deg);
+      }
+      20% { opacity: 0.68; }
+      80% { opacity: 0.55; }
+      100% {
+        opacity: 0;
+        transform: translate3d(var(--drift-x, 18px), -140px, 0) scale(1.08) rotate(12deg);
+      }
+    }
+    @keyframes confettiFall {
+      0% {
+        opacity: 1;
+        transform: translate3d(0, -10px, 0) rotate(0deg) scale(0.8);
+      }
+      100% {
+        opacity: 0;
+        transform: translate3d(var(--cx, 40px), 105vh, 0) rotate(var(--rot, 540deg)) scale(1.1);
+      }
+    }
+
+    .ambient-particle {
+      position: fixed;
+      pointer-events: none;
+      user-select: none;
+      animation: ambientRise var(--dur, 7s) ease-in-out forwards;
+      z-index: 1;
+    }
+    .confetti-piece {
+      position: fixed;
+      top: -12px;
+      pointer-events: none;
+      z-index: 60;
+      animation: confettiFall var(--fall-dur, 2.6s) cubic-bezier(0.25, 0.8, 0.45, 1) forwards;
+    }
+
+    /* Modal Spring Enter & Exit Transitions */
+    @keyframes backdropFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes backdropFadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    @keyframes modalSpringIn {
+      0% { opacity: 0; transform: scale(0.9) translateY(16px); }
+      65% { opacity: 1; transform: scale(1.02) translateY(-2px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    @keyframes modalSpringOut {
+      0% { opacity: 1; transform: scale(1) translateY(0); }
+      100% { opacity: 0; transform: scale(0.9) translateY(12px); }
+    }
+
+    .modal-backdrop-enter { animation: backdropFadeIn 0.24s ease forwards; }
+    .modal-backdrop-exit { animation: backdropFadeOut 0.19s ease forwards; }
+    .modal-spring-enter { animation: modalSpringIn 0.40s var(--spring-bouncy) forwards; }
+    .modal-spring-exit { animation: modalSpringOut 0.19s ease-in forwards; }
+
+    /* Skeleton Shimmer, Cute Spinner, SVG Checkmark & Error Shake */
+    @keyframes spinOrbit {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes skeletonShimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes drawCheckmark {
+      0% { stroke-dashoffset: 48; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes cuteShake {
+      0%, 100% { transform: translateX(0); }
+      18% { transform: translateX(-7px); }
+      36% { transform: translateX(7px); }
+      54% { transform: translateX(-5px); }
+      72% { transform: translateX(5px); }
+      90% { transform: translateX(-2px); }
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cute-spinner-ring {
+      animation: spinOrbit 0.9s linear infinite;
+    }
+    .skeleton-shimmer {
+      background: linear-gradient(90deg, #F9DCE7 25%, #FFFAF8 50%, #E8E1FA 75%);
+      background-size: 200% 100%;
+      animation: skeletonShimmer 1.35s ease-in-out infinite;
+    }
+    .checkmark-path {
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: drawCheckmark 0.55s var(--ease-smooth) 0.12s forwards;
+    }
+    .animate-cute-shake {
+      animation: cuteShake 0.44s ease-in-out;
+    }
+    .animate-fade-up {
+      animation: fadeSlideUp 0.34s var(--ease-smooth) forwards;
+    }
+
+    /* Floating Navigation Levitation & Tab Slide */
+    @keyframes navLevitate {
+      0%, 100% { transform: translate3d(-50%, 0, 0); }
+      50% { transform: translate3d(-50%, -3px, 0); }
+    }
+    @keyframes iconPopBounce {
+      0% { transform: scale(1); }
+      45% { transform: scale(1.32) rotate(-10deg); }
+      75% { transform: scale(0.92) rotate(4deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+    @keyframes tabSlideFade {
+      0% { opacity: 0; transform: translateX(10px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .nav-levitate {
+      animation: navLevitate 4.2s ease-in-out infinite;
+    }
+    .animate-icon-pop {
+      animation: iconPopBounce 0.42s var(--spring-bouncy);
+    }
+    .tab-content-slide {
+      animation: tabSlideFade 0.32s var(--ease-smooth) forwards;
+    }
+
+    /* =========================================================================
+       3. BALANCED RESPONSIVE SCALING & TOUCH INPUT ZOOM PROTECTION
+       ========================================================================= */
+    #app,
+    #publicView,
+    #adminView,
+    #reviewContentSection,
+    #adminSubViewContainer,
+    .glass-card,
+    .glass-lavender,
+    .glass-pink,
+    .glass-blue-mint,
+    .review-card-item {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    #shopNameDisplay,
+    #shopDescDisplay,
+    #activeCategoryTitle,
+    #activeCategorySubtitle,
+    .review-card-item h3,
+    .review-card-item p,
+    #adminSubViewContainer p,
+    #adminSubViewContainer h2,
+    #adminSubViewContainer h3 {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    /* Safe Area Support for Notch, Dynamic Island & Bottom Home Bar */
+    #app {
+      padding-top: max(1rem, env(safe-area-inset-top));
+      padding-left: max(0.875rem, env(safe-area-inset-left));
+      padding-right: max(0.875rem, env(safe-area-inset-right));
+      padding-bottom: calc(8.5rem + env(safe-area-inset-bottom));
+    }
+
+    @media (min-width: 640px) {
+      #app {
+        padding-top: max(1.5rem, env(safe-area-inset-top));
+        padding-left: max(1.5rem, env(safe-area-inset-left));
+        padding-right: max(1.5rem, env(safe-area-inset-right));
+        padding-bottom: calc(9rem + env(safe-area-inset-bottom));
+      }
+    }
+
+    nav[aria-label="Primary Navigation"] {
+      bottom: calc(1.1rem + env(safe-area-inset-bottom));
+    }
+
+    #floatingAddReviewBtn {
+      bottom: calc(5.1rem + env(safe-area-inset-bottom));
+      right: max(1rem, env(safe-area-inset-right));
+    }
+
+    @media (min-width: 640px) {
+      #floatingAddReviewBtn {
+        bottom: calc(1.5rem + env(safe-area-inset-bottom));
+        right: max(1.75rem, env(safe-area-inset-right));
+      }
+    }
+
+    #toastContainer {
+      top: max(1rem, env(safe-area-inset-top));
+      right: max(1rem, env(safe-area-inset-right));
+    }
+
+    #reviewModal,
+    #adminLoginModal,
+    #confirmDialogModal,
+    #imageLightboxModal {
+      padding-top: max(1rem, env(safe-area-inset-top));
+      padding-bottom: max(1rem, env(safe-area-inset-bottom));
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+
+    #reviewModalCard,
+    #adminLoginModalCard,
+    #confirmDialogCard {
+      max-height: 90dvh;
+      overflow-y: auto;
+    }
+
+    #lightboxImg {
+      max-height: 80dvh;
+    }
+
+    /* Prevent iOS Safari / Mobile Browser Auto-Zoom When Tapping Inputs to Type,
+       While Keeping Normal Two-Finger Pinch-to-Zoom Fully Enabled */
+    @media (pointer: coarse) {
+      input[type="text"],
+      input[type="url"],
+      input[type="password"],
+      select,
+      textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .nav-levitate { transform: translateX(-50%) !important; }
+      .ambient-particle, .confetti-piece { display: none !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen relative selection:bg-[#FFD8E8] selection:text-[#29263B]">
+
+  <!-- Ambient Blurred Pastel Background Orbs -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+    <div class="orb-1 absolute -top-24 -left-24 w-72 h-72 sm:w-[440px] sm:h-[440px] rounded-full bg-[#FFD8E8]/65 blur-[90px]"></div>
+    <div class="orb-2 absolute top-1/3 -right-28 w-72 h-72 sm:w-[460px] sm:h-[460px] rounded-full bg-[#E8E1FA]/65 blur-[95px]"></div>
+    <div class="orb-3 absolute bottom-10 left-1/4 w-64 h-64 sm:w-[400px] sm:h-[400px] rounded-full bg-[#C6DFF8]/60 blur-[90px]"></div>
+    <div class="orb-1 absolute top-2/3 right-1/4 w-56 h-56 rounded-full bg-[#D2EEE2]/55 blur-[85px]"></div>
+  </div>
+
+  <!-- Non-Blocking Cute Ambient Particle Layer -->
+  <div id="cuteAmbientLayer" class="fixed inset-0 pointer-events-none overflow-hidden z-[1]" aria-hidden="true"></div>
+
+  <!-- Main Application Shell -->
+  <div id="app" class="relative z-10 max-w-4xl mx-auto">
+    <!-- Top Real-Time Sync Badge & Admin Session Bar -->
+    <header class="flex flex-wrap items-center justify-between gap-2 mb-3.5 sm:mb-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 backdrop-blur-md border border-[#F0E8F0] shadow-pastel-sm text-[11px] sm:text-xs text-[#9692A5]">
+        <span id="syncDot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+        <span class="font-medium text-[#29263B]">zonlcredit ↔ creditzon</span>
+        <span>•</span>
+        <span id="realtimeSyncStatusText" class="truncate">กำลังเชื่อมต่อฐานข้อมูลหลังบ้าน...</span>
+      </div>
+
+      <div id="headerAdminStatus" class="hidden items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#D2EEE2]/85 border border-white text-[11px] sm:text-xs font-medium text-[#29263B] shadow-pastel-sm">
+          <span class="material-symbols-rounded text-[15px] text-emerald-600 g-icon-fill">verified_user</span>
+          <span>Admin Session Active</span>
+        </span>
+      </div>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- PUBLIC STOREFRONT VIEW: PROFILE + STATS + TABS + REVIEWS  -->
+    <!-- ========================================================= -->
+    <main id="publicView" class="space-y-4 sm:space-y-6">
+
+      <!-- 1. SHOP PROFILE HEADER (2X LARGER COVER & PROFILE AVATAR BOX) -->
+      <section class="glass-card rounded-[32px] sm:rounded-[38px] p-3 sm:p-5 shadow-pastel-md overflow-hidden">
+        <div
+          class="relative w-full h-72 sm:h-[416px] md:h-[480px] rounded-[24px] sm:rounded-[32px] overflow-hidden group"
+          style="background: linear-gradient(135deg, #FFD8E8 0%, #E8E1FA 52%, #C6DFF8 100%);"
+        >
+          <img
+            id="shopCoverImg"
+            src=""
+            alt="Shop Cover"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            onerror="this.style.display='none';"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#29263B]/20 via-transparent to-white/10 pointer-events-none"></div>
+
+          <!-- Top-Left Official Badge -->
+          <div class="absolute top-3.5 left-3.5 sm:top-5 sm:left-5 inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/85 backdrop-blur-md border border-white/95 text-xs sm:text-sm font-medium text-[#29263B] shadow-sm">
+            <span class="twinkle-bounce text-[#F5A6C1]">
+              <span class="material-symbols-rounded text-[15px] sm:text-[17px] g-icon-fill">auto_awesome</span>
+            </span>
+            <span id="shopBadgeTag">Official Matcha &amp; Dessert Atelier</span>
+          </div>
+
+          <!-- Quick Cover Edit Button (Visible when Admin is authenticated) -->
+          <button
+            id="quickEditCoverBtn"
+            onclick="openAdminTab('profile')"
+            class="cute-btn hidden absolute top-3.5 right-3.5 sm:top-5 sm:right-5 items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/90 hover:bg-white backdrop-blur-md border border-white text-xs sm:text-sm font-medium text-[#29263B] shadow-pastel-sm cursor-pointer"
+          >
+            <span class="material-symbols-rounded text-[16px] sm:text-[18px] text-[#F5A6C1]">photo_camera</span>
+            <span>เปลี่ยนภาพปก</span>
+          </button>
+        </div>
+
+        <!-- Shop Profile Information (2X Larger Profile Avatar Box & Harmonized Spacing) -->
+        <div class="px-2 sm:px-5 pb-3 pt-4 sm:pt-6">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-5">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+              <div class="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-[28px] sm:rounded-[36px] md:rounded-[42px] border-4 sm:border-[5px] border-white bg-gradient-to-br from-[#FFD8E8] via-[#E8E1FA] to-[#C6DFF8] shadow-pastel-md overflow-hidden shrink-0 flex items-center justify-center transition-transform duration-300 hover:scale-105">
+                <img
+                  id="shopAvatarImg"
+                  src=""
+                  alt="Shop Avatar"
+                  class="w-full h-full object-cover"
+                  onerror="this.style.display='none'; document.getElementById('shopAvatarFallback').classList.remove('hidden');"
+                />
+                <div id="shopAvatarFallback" class="hidden flex-col items-center justify-center text-[#29263B]">
+                  <span class="material-symbols-rounded text-[48px] sm:text-[64px] text-[#F5A6C1]">storefront</span>
+                </div>
+              </div>
+
+              <div class="space-y-1.5 sm:space-y-2">
+                <div class="flex flex-wrap items-center gap-2">
+                  <h1 id="shopNameDisplay" class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#29263B] font-prompt">
+                    Kumo &amp; Matcha Studio
+                  </h1>
+                  <span class="gentle-bob inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#FFD8E8] text-[#E06D97]" title="Verified Shop">
+                    <span class="material-symbols-rounded text-[16px] sm:text-[18px] g-icon-fill">verified</span>
+                  </span>
+                </div>
+                <p id="shopDescDisplay" class="text-xs sm:text-sm md:text-base text-[#9692A5] max-w-2xl leading-relaxed">
+                  สตูดิโอมัทฉะเกรดพิธีการและขนมหวานสไตล์ญี่ปุ่นโฮมเมด ละมุนทุกคำในบรรยากาศมินิมอลพาสเทล
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2 sm:gap-2.5 shrink-0">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#D2EEE2]/80 border border-white text-xs sm:text-sm font-medium text-[#29263B]">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span id="shopStatusText">เปิดให้บริการ • Open</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#F9DCE7]/80 border border-white text-xs sm:text-sm font-medium text-[#29263B]">
+                <span class="float-gentle text-[#E06D97]">
+                  <span class="material-symbols-rounded text-[15px] sm:text-[17px] g-icon-fill">favorite</span>
+                </span>
+                <span id="shopResponseText">ตอบกลับไว 99%</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. REVIEW STATISTICS DASHBOARD: 1:1 SQUARE TOP CARDS + BOTTOM FULL-WIDTH BAR -->
+      <section aria-label="Review Statistics" class="grid grid-cols-2 gap-3 sm:gap-5">
+        <!-- CARD 1 (TOP-LEFT - 1:1 SQUARE): รีวิวทั้งหมด -->
+        <div class="stat-square-card aspect-square glass-lavender rounded-[24px] sm:rounded-[30px] p-3 sm:p-6 shadow-pastel-sm pastel-hover flex flex-col justify-between relative overflow-hidden">
+          <!-- Header -->
+          <div class="inline-flex items-center gap-1.5 sm:gap-2.5">
+            <span class="w-6 h-6 sm:w-10 sm:h-10 rounded-lg sm:rounded-2xl bg-white/90 flex items-center justify-center shadow-sm text-[#7A66D6] shrink-0">
+              <span class="float-gentle">
+                <span class="material-symbols-rounded text-[15px] sm:text-[22px] g-icon-fill">local_fire_department</span>
+              </span>
+            </span>
+            <span class="text-xs sm:text-base font-semibold text-[#29263B] truncate">รีวิวทั้งหมด</span>
+          </div>
+
+          <!-- Center Number + Donut Chart -->
+          <div class="flex items-center justify-between gap-1.5 sm:gap-3 my-auto">
+            <div class="min-w-0">
+              <div class="flex items-baseline gap-1 sm:gap-1.5">
+                <span id="statTotalReviews" class="font-num text-3xl sm:text-5xl md:text-6xl font-bold text-[#29263B] tracking-tight leading-none">0</span>
+                <span class="text-[10px] sm:text-sm font-medium text-[#9692A5]">รายการ</span>
+              </div>
+              <p class="text-[10px] sm:text-xs text-[#9692A5] mt-1 sm:mt-2 leading-tight">แยกตามหมวดหมู่</p>
+            </div>
+
+            <div class="relative w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 shrink-0 flex items-center justify-center">
+              <svg id="donutChartSvg" viewBox="0 0 100 100" class="w-full h-full overflow-visible"></svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                <span id="donutCenterLabel" class="font-num text-[9px] sm:text-xs md:text-sm font-bold text-[#29263B]">4 หมวด</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Decorative Pill -->
+          <div class="pt-1.5 sm:pt-3 border-t border-white/75 flex items-center justify-between text-[10px] sm:text-xs text-[#9692A5]">
+            <span class="truncate">อัปเดตแบบเรียลไทม์</span>
+            <span class="w-2 h-2 rounded-full bg-[#7A66D6]/60 shrink-0"></span>
+          </div>
+        </div>
+
+        <!-- CARD 2 (TOP-RIGHT - 1:1 SQUARE): คะแนนดาว -->
+        <div class="stat-square-card aspect-square glass-pink rounded-[24px] sm:rounded-[30px] p-3 sm:p-6 shadow-pastel-sm pastel-hover flex flex-col justify-between relative overflow-hidden">
+          <!-- Header & Score -->
+          <div>
+            <div class="inline-flex items-center gap-1.5 sm:gap-2.5 mb-1 sm:mb-2">
+              <span class="w-6 h-6 sm:w-10 sm:h-10 rounded-lg sm:rounded-2xl bg-white/90 flex items-center justify-center shadow-sm text-[#E06D97] shrink-0">
+                <span class="twinkle-bounce">
+                  <span class="material-symbols-rounded text-[15px] sm:text-[22px] text-[#F5B82E] g-icon-fill">star</span>
+                </span>
+              </span>
+              <span class="text-xs sm:text-base font-semibold text-[#29263B] truncate">คะแนนดาว</span>
+            </div>
+
+            <div class="flex items-baseline gap-1 sm:gap-1.5">
+              <span id="statAvgRating" class="font-num text-2xl sm:text-5xl md:text-6xl font-bold text-[#29263B] tracking-tight leading-none">0.0</span>
+              <span class="font-num text-[11px] sm:text-base font-medium text-[#9692A5]">/ 5.0</span>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-1 sm:gap-1.5 mt-1 sm:mt-2">
+              <div id="statAvgStarsRow" class="flex items-center gap-0.5 text-[#F5B82E]"></div>
+              <span id="statRatingBadge" class="hidden sm:inline-block text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-white/85 text-[#C8527D]">ยังไม่มีคะแนน</span>
+            </div>
+          </div>
+
+          <!-- Star Distribution Bars -->
+          <div id="starMiniBars" class="pt-1.5 sm:pt-3 border-t border-white/75 space-y-0.5 sm:space-y-1.5"></div>
+        </div>
+
+        <!-- CARD 3 (BOTTOM FULL-WIDTH HORIZONTAL BAR): รวมเปอร์เซ็นต์ -->
+        <div class="col-span-2 glass-blue-mint rounded-[24px] sm:rounded-[28px] px-4 py-3.5 sm:px-6 sm:py-4 shadow-pastel-sm pastel-hover flex items-center justify-between gap-3 sm:gap-5 relative overflow-hidden">
+          <div class="space-y-1 min-w-0 flex-1">
+            <div class="inline-flex items-center gap-2">
+              <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl sm:rounded-2xl bg-white/90 flex items-center justify-center shadow-sm text-[#5BA4E5] shrink-0">
+                <span class="float-gentle">
+                  <span class="material-symbols-rounded text-[18px] sm:text-[20px] g-icon-fill">volunteer_activism</span>
+                </span>
+              </span>
+              <span class="text-xs sm:text-sm font-semibold text-[#29263B]">รวมเปอร์เซ็นต์</span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-[#9692A5] leading-relaxed">
+              ความพึงพอใจโดยรวมจากคะแนนรีวิวลูกค้าทั้งหมด
+            </p>
+            <div class="pt-0.5">
+              <span id="satisfactionMoodPill" class="inline-flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/85 text-[11px] sm:text-xs font-medium text-[#29263B] shadow-sm">
+                <span class="material-symbols-rounded text-[14px] sm:text-[15px] text-emerald-500 g-icon-fill">eco</span>
+                <span>รอรับรีวิวแรกจากคุณ</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="relative w-20 h-20 sm:w-24 sm:h-24 shrink-0 flex items-center justify-center">
+            <svg class="w-full h-full" viewBox="0 0 110 110">
+              <defs>
+                <linearGradient id="pastelRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F5A6C1" />
+                  <stop offset="50%" stop-color="#CDBFF5" />
+                  <stop offset="100%" stop-color="#6BB8F2" />
+                </linearGradient>
+              </defs>
+              <circle cx="55" cy="55" r="44" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="11" />
+              <circle
+                id="satisfactionRingCircle"
+                class="progress-ring-circle"
+                cx="55" cy="55" r="44"
+                fill="none"
+                stroke="url(#pastelRingGrad)"
+                stroke-width="11"
+                stroke-linecap="round"
+                stroke-dasharray="276.46"
+                stroke-dashoffset="276.46"
+              />
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span id="statSatisfactionPct" class="font-num text-lg sm:text-2xl font-bold text-[#29263B]">0%</span>
+              <span class="text-[9px] sm:text-[10px] font-medium text-[#9692A5]">พึงพอใจ</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. REVIEW CATEGORY TABS & THREE-DOT MENU -->
+      <section aria-label="Review Categories" class="relative z-20">
+        <div class="glass-card rounded-[24px] sm:rounded-[26px] p-1.5 sm:p-2.5 flex items-center justify-between gap-2 shadow-pastel-sm">
+          <div id="categoryTabsContainer" role="tablist" class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar flex-1 py-0.5 px-0.5"></div>
+
+          <div class="relative shrink-0 pr-0.5 sm:pr-1">
+            <button
+              id="threeDotMenuBtn"
+              onclick="toggleThreeDotMenu(event)"
+              aria-label="More options"
+              aria-haspopup="true"
+              aria-expanded="false"
+              class="cute-btn w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-white/95 hover:bg-[#F9DCE7]/60 border border-[#F0E8F0] flex items-center justify-center text-[#29263B] shadow-sm cursor-pointer"
+            >
+              <span class="material-symbols-rounded text-[19px] sm:text-[20px]">more_vert</span>
+            </button>
+
+            <div
+              id="threeDotDropdown"
+              class="hidden absolute right-0 mt-2.5 w-60 sm:w-64 rounded-[24px] bg-white/95 backdrop-blur-xl border border-[#F0E8F0] shadow-pastel-lg p-2 z-40"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. REVIEW CONTENT AREA -->
+      <section id="reviewContentSection" aria-label="Review List" class="glass-card rounded-[28px] sm:rounded-[32px] p-4 sm:p-7 shadow-pastel-md">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 sm:pb-5 mb-4 sm:mb-5 border-b border-[#F0E8F0]">
+          <div class="space-y-1">
+            <div class="flex flex-wrap items-center gap-2">
+              <span id="activeTabPillBadge" class="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-[#F9DCE7] text-[#C8527D]">
+                ทั้งหมด
+              </span>
+              <h2 id="activeCategoryTitle" class="text-base sm:text-xl font-bold text-[#29263B]">
+                รีวิวทั้งหมดจากลูกค้า
+              </h2>
+            </div>
+            <p id="activeCategorySubtitle" class="text-xs sm:text-sm text-[#9692A5]">
+              รวมความประทับใจและคะแนนรีวิวจากทุกหมวดหมู่
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 self-start sm:self-center">
+            <button
+              id="clearFilterPill"
+              onclick="setStarFilter(0)"
+              class="cute-btn hidden items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E8E1FA] text-xs font-medium text-[#29263B] hover:bg-[#CDBFF5]/60 cursor-pointer"
+            >
+              <span id="clearFilterText">กรอง: 5 ดาว</span>
+              <span class="material-symbols-rounded text-[15px]">close</span>
+            </button>
+
+            <span id="activeCategoryCountBadge" class="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#FFFAF8] border border-[#F0E8F0] text-xs font-semibold text-[#29263B] shadow-sm">
+              <span class="float-gentle text-[#F5A6C1]">
+                <span class="material-symbols-rounded text-[15px] g-icon-fill">chat_bubble</span>
+              </span>
+              <span>0 รีวิว</span>
+            </span>
+          </div>
+        </div>
+
+        <div id="reviewListContainer" class="space-y-3.5 sm:space-y-4"></div>
+      </section>
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- PROTECTED ADMIN CONTROL CENTER VIEW                       -->
+    <!-- ========================================================= -->
+    <section id="adminView" class="hidden space-y-5 sm:space-y-6 animate-fade-up">
+      <div class="glass-card rounded-[28px] sm:rounded-[30px] p-4 sm:p-6 shadow-pastel-md">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3 sm:gap-3.5">
+            <div class="gentle-bob w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-[#F5A6C1] to-[#CDBFF5] flex items-center justify-center text-white shadow-pastel-sm shrink-0">
+              <span class="material-symbols-rounded text-[22px] sm:text-[24px] g-icon-fill">verified_user</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h1 class="text-lg sm:text-2xl font-bold text-[#29263B]">Admin Control Center</h1>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#D2EEE2] text-[10px] sm:text-[11px] font-semibold text-[#29263B]">Verified</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#9692A5]">จัดการรีวิวลูกค้า อนุมัติรายการ เพิ่ม/ลบหมวดหมู่ และตั้งค่าโปรไฟล์ร้านค้า</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2">
+            <button
+              onclick="openAddReviewModal(true)"
+              class="cute-btn cute-gradient-flow inline-flex items-center gap-1.5 px-4 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-[#F5A6C1] via-[#CDBFF5] to-[#F5A6C1] text-white text-xs sm:text-sm font-semibold shadow-pastel-sm cursor-pointer"
+            >
+              <span class="material-symbols-rounded text-[17px] sm:text-[18px]">add</span>
+              <span>เพิ่มรีวิวใหม่</span>
+            </button>
+            <button
+              onclick="handleAdminLogout()"
+              class="cute-btn inline-flex items-center gap-1.5 px-4 py-2 sm:py-2.5 rounded-full bg-white hover:bg-[#FFD8E8]/50 border border-[#F0E8F0] text-[#29263B] text-xs sm:text-sm font-medium cursor-pointer"
+            >
+              <span class="material-symbols-rounded text-[17px] sm:text-[18px] text-[#E06D97]">logout</span>
+              <span>ออกจากระบบ</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Admin Quick KPI Summary Strip -->
+        <div id="adminSummaryCardsGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 mt-4 sm:mt-5 pt-4 border-t border-[#F0E8F0]"></div>
+
+        <!-- Admin Sub-Navigation Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar mt-4 pt-4 border-t border-[#F0E8F0]">
+          <button
+            onclick="switchAdminSubTab('all')"
+            id="adminSubTab-all"
+            class="cute-btn admin-subtab inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer"
+          >
+            <span class="material-symbols-rounded text-[17px] sm:text-[18px]">checklist</span>
+            <span>รีวิวทั้งหมด</span>
+            <span id="adminAllBadge" class="font-num px-2 py-0.5 rounded-full text-[11px] bg-[#E8E1FA] text-[#5B47B0]">0</span>
+          </button>
+
+          <button
+            onclick="switchAdminSubTab('pending')"
+            id="adminSubTab-pending"
+            class="cute-btn admin-subtab inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer"
+          >
+            <span class="material-symbols-rounded text-[17px] sm:text-[18px]">schedule</span>
+            <span>รออนุมัติ</span>
+            <span id="adminPendingBadge" class="font-num px-2 py-0.5 rounded-full text-[11px] bg-[#FFD8E8] text-[#C8527D]">0</span>
+          </button>
+
+          <button
+            onclick="switchAdminSubTab('categories')"
+            id="adminSubTab-categories"
+            class="cute-btn admin-subtab inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer"
+          >
+            <span class="material-symbols-rounded text-[17px] sm:text-[18px]">folder_special</span>
+            <span>จัดการหมวดหมู่</span>
+          </button>
+
+          <button
+            onclick="switchAdminSubTab('profile')"
+            id="adminSubTab-profile"
+            class="cute-btn admin-subtab inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer"
+          >
+            <span class="material-symbols-rounded text-[17px] sm:text-[18px]">storefront</span>
+            <span>ข้อมูลร้านค้า &amp; ระบบ</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="adminSubViewContainer"></div>
+    </section>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- FLOATING ADD REVIEW BUTTON (FAB - BOTTOM RIGHT)           -->
+  <!-- ========================================================= -->
+  <button
+    id="floatingAddReviewBtn"
+    onclick="openAddReviewModal(false)"
+    aria-label="เขียนรีวิวใหม่"
+    title="เขียนรีวิวใหม่ • Write a Review"
+    class="cute-btn fixed z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-[#1F3A52] shadow-fab-blue cursor-pointer group"
+    style="background: linear-gradient(135deg, #C6DFF8 0%, #98C7F5 100%); border: 2px solid rgba(255,255,255,0.95);"
+  >
+    <span class="material-symbols-rounded text-[22px] sm:text-[24px] transition-transform duration-300 group-hover:rotate-12">edit_square</span>
+  </button>
+
+  <!-- ========================================================= -->
+  <!-- BOTTOM FLOATING PILL NAVIGATION (REVIEW / ADMIN)          -->
+  <!-- ========================================================= -->
+  <nav aria-label="Primary Navigation" class="nav-levitate fixed left-1/2 -translate-x-1/2 z-40">
+    <div class="glass-pill-nav rounded-full p-1.5 flex items-center gap-1.5">
+      <button
+        id="navReviewBtn"
+        onclick="switchMainView('review')"
+        class="cute-btn inline-flex items-center gap-2 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer"
+      >
+        <span id="navReviewIcon" class="material-symbols-rounded text-[17px] sm:text-[18px] g-icon-fill">auto_awesome</span>
+        <span>Review</span>
+      </button>
+
+      <button
+        id="navAdminBtn"
+        onclick="switchMainView('admin')"
+        class="cute-btn relative inline-flex items-center gap-2 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer"
+      >
+        <span id="navAdminIcon" class="material-symbols-rounded text-[17px] sm:text-[18px]">lock</span>
+        <span>Admin</span>
+        <span id="navPendingDot" class="hidden w-2 h-2 rounded-full bg-[#F5A6C1] animate-ping"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 1: ADD / EDIT REVIEW MODAL (WITH STEPPER)           -->
+  <!-- ========================================================= -->
+  <div id="reviewModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#29263B]/30 backdrop-blur-sm">
+    <div id="reviewModalCard" class="bg-[#FFFAF8] border border-white rounded-[32px] w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-pastel-lg p-5 sm:p-7 relative">
+
+      <!-- Success Checkmark View -->
+      <div id="reviewModalSuccessState" class="hidden py-10 px-4 text-center space-y-3">
+        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#D2EEE2] to-[#C6DFF8] mx-auto flex items-center justify-center shadow-pastel-md">
+          <svg class="w-11 h-11 text-emerald-700" viewBox="0 0 36 36" fill="none">
+            <path class="checkmark-path" d="M8 18.5L15 25.5L28 11.5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-[#29263B] inline-flex items-center justify-center gap-1.5">
+          <span>บันทึกรีวิวสำเร็จแล้ว!</span>
+          <span class="material-symbols-rounded text-[22px] text-[#7A66D6] g-icon-fill">auto_awesome</span>
+        </h3>
+        <p id="reviewModalSuccessText" class="text-xs sm:text-sm text-[#9692A5] max-w-xs mx-auto leading-relaxed">
+          ขอบคุณสำหรับความประทับใจที่แบ่งปันให้กับร้านค้านะคะ
+        </p>
+      </div>
+
+      <!-- Review Form Content -->
+      <div id="reviewModalFormWrapper">
+        <div class="flex items-center justify-between pb-4 border-b border-[#F0E8F0]">
+          <div class="flex items-center gap-2.5">
+            <span class="gentle-bob w-10 h-10 rounded-2xl bg-[#FFD8E8] flex items-center justify-center text-[#C8527D]">
+              <span class="material-symbols-rounded text-[20px] g-icon-fill">favorite</span>
+            </span>
+            <div>
+              <h3 id="reviewModalTitle" class="text-lg font-bold text-[#29263B]">เขียนรีวิวร้านค้า</h3>
+              <p id="reviewModalSubtitle" class="text-xs text-[#9692A5]">แบ่งปันประสบการณ์ความประทับใจของคุณ</p>
+            </div>
+          </div>
+          <button type="button" onclick="closeReviewModal()" class="cute-btn w-9 h-9 rounded-full bg-white border border-[#F0E8F0] flex items-center justify-center text-[#9692A5] hover:text-[#29263B] cursor-pointer">
+            <span class="material-symbols-rounded text-[18px]">close</span>
+          </button>
+        </div>
+
+        <form id="reviewForm" novalidate onsubmit="handleReviewFormSubmit(event)" class="space-y-4 mt-4">
+          <input type="hidden" id="editReviewId" value="" />
+          <input type="hidden" id="isAdminDirectCreate" value="false" />
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div>
+              <label for="reviewerNameInput" class="block text-xs font-semibold text-[#29263B] mb-1.5">
+                ชื่อผู้รีวิว <span class="text-[#F5A6C1]">*</span>
+              </label>
+              <input
+                type="text"
+                id="reviewerNameInput"
+                maxlength="40"
+                placeholder="เช่น น้องมิ้นท์, คุณแพรว..."
+                class="w-full px-4 py-2.5 rounded-2xl bg-white border border-[#F0E8F0] text-sm text-[#29263B] placeholder-[#9692A5]/70 focus:outline-none focus:border-[#F5A6C1] focus:ring-2 focus:ring-[#FFD8E8]"
+              />
+            </div>
+
+            <div>
+              <label for="reviewCategoryInput" class="block text-xs font-semibold text-[#29263B] mb-1.5">
+                หมวดหมู่รีวิว <span class="text-[#F5A6C1]">*</span>
+              </label>
+              <select
+                id="reviewCategoryInput"
+                class="w-full px-4 py-2.5 rounded-2xl bg-white border border-[#F0E8F0] text-sm text-[#29263B] focus:outline-none focus:border-[#CDBFF5] focus:ring-2 focus:ring-[#E8E1FA]"
+              ></select>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE RATING SELECTOR (- / +) -->
+          <div class="p-4 rounded-[26px] bg-gradient-to-br from-[#FFF5FA] via-white to-[#F5F1FF] border border-[#F0E8F0] shadow-pastel-sm">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-semibold text-[#29263B]">
+                ให้คะแนนความพึงพอใจ <span class="text-[#F5A6C1]">*</span>
+              </span>
+              <span class="text-[11px] font-medium text-[#9692A5]">เลือก 1 – 5 คะแนน</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-3">
+              <div
+                id="ratingPillStepper"
+                class="rating-pill-glass relative inline-flex items-center justify-between gap-4 sm:gap-6 px-2.5 py-2 select-none"
+              >
+                <button
+                  type="button"
+                  id="ratingMinusBtn"
+                  onclick="stepModalRating(-1)"
+                  aria-label="ลดคะแนน 1 คะแนน"
+                  class="cute-btn w-12 h-12 rounded-full bg-gradient-to-br from-[#F9DCE7] to-[#E8E1FA] text-[#29263B] flex items-center justify-center shadow-sm cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed disabled:pointer-events-none disabled:bg-[#F0E8F0] disabled:text-[#9692A5]"
+                >
+                  <span class="material-symbols-rounded text-[22px]">remove</span>
+                </button>
+
+                <div class="flex items-baseline justify-center min-w-[74px] text-center">
+                  <span
+                    id="ratingNumberDisplay"
+                    class="font-num inline-block text-[28px] leading-none font-bold text-[#29263B]"
+                  >5</span>
+                  <span class="font-num text-sm font-semibold text-[#9692A5] ml-1">/ 5</span>
+                </div>
+
+                <button
+                  type="button"
+                  id="ratingPlusBtn"
+                  onclick="stepModalRating(1)"
+                  aria-label="เพิ่มคะแนน 1 คะแนน"
+                  class="cute-btn w-12 h-12 rounded-full bg-gradient-to-br from-[#FFD8E8] to-[#C6DFF8] text-[#29263B] flex items-center justify-center shadow-sm cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed disabled:pointer-events-none disabled:bg-[#F0E8F0] disabled:text-[#9692A5]"
+                >
+                  <span class="material-symbols-rounded text-[22px]">add</span>
+                </button>
+              </div>
+
+              <div id="starSelectorGroup" class="flex items-center justify-center gap-1.5" aria-label="คะแนนดาวที่เลือก"></div>
+
+              <div
+                id="starRatingMoodPill"
+                class="inline-flex items-center justify-center gap-1 px-3.5 py-1 rounded-full bg-white/95 border border-[#F0E8F0] text-xs font-semibold text-[#C8527D] shadow-sm"
+              >
+                <span>5 คะแนน • ประทับใจมากที่สุด</span>
+                <span class="material-symbols-rounded text-[15px] text-[#F5B82E] g-icon-fill">auto_awesome</span>
+              </div>
+            </div>
+
+            <input type="hidden" id="reviewRatingInput" value="5" />
+          </div>
+
+          <div>
+            <label for="reviewMessageInput" class="block text-xs font-semibold text-[#29263B] mb-1.5">
+              ข้อความรีวิว <span class="text-[#F5A6C1]">*</span>
+            </label>
+            <textarea
+              id="reviewMessageInput"
+              rows="3"
+              maxlength="500"
+              placeholder="เล่าความประทับใจของคุณให้ร้านค้าและเพื่อนๆ ฟัง..."
+              class="w-full px-4 py-3 rounded-2xl bg-white border border-[#F0E8F0] text-sm text-[#29263B] placeholder-[#9692A5]/70 focus:outline-none focus:border-[#F5A6C1] focus:ring-2 focus:ring-[#FFD8E8] resize-none"
+            ></textarea>
+          </div>
+
+          <!-- Admin-Only Date / Time / Status Fields when Editing -->
+          <div id="adminReviewExtraFields" class="hidden grid-cols-1 sm:grid-cols-3 gap-3 p-3.5 rounded-2xl bg-[#E8E1FA]/45 border border-[#CDBFF5]/50">
+            <div>
+              <label class="block text-[11px] font-semibold text-[#29263B] mb-1">วันที่รีวิว</label>
+              <input type="text" id="editReviewDateInput" class="w-full px-3 py-2 rounded-xl bg-white border border-[#F0E8F0] text-xs" />
+            </div>
+            <div>
+              <label class="block text-[11px] font-semibold text-[#29263B] mb-1">เวลารีวิว</label>
+              <input type="text" id="editReviewTimeInput" class="w-full px-3 py-2 rounded-xl bg-white border border-[#F0E8F0] text-xs" />
+            </div>
+            <div>
+              <label class="block text-[11px] font-semibold text-[#29263B] mb-1">สถานะการแสดงผล</label>
+              <select id="editReviewStatusInput" class="w-full px-3 py-2 rounded-xl bg-white border border-[#F0E8F0] text-xs">
+                <option value="approved">อนุมัติ (Approved)</option>
+                <option value="pending">รออนุมัติ (Pending)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Optional Image Attachment -->
+          <div>
+            <label class="block text-xs font-semibold text-[#29263B] mb-1.5">แนบรูปภาพประกอบ (ไม่บังคับ)</label>
+            <div class="flex flex-col sm:flex-row gap-2">
+              <label class="cute-btn inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-[#E8E1FA]/75 hover:bg-[#E8E1FA] text-xs font-semibold text-[#29263B] cursor-pointer shrink-0">
+                <span class="material-symbols-rounded text-[18px] text-[#7A66D6]">add_photo_alternate</span>
+                <span>เลือกรูปจากเครื่อง</span>
+                <input type="file" id="reviewImageFileInput" accept="image/*" onchange="handleReviewImageUpload(event)" class="hidden" />
+              </label>
+              <input
+                type="url"
+                id="reviewImageUrlInput"
+                placeholder="หรือวางลิงก์รูปภาพ (https://...)"
+                oninput="handleReviewImageUrlChange(this.value)"
+                class="flex-1 px-3.5 py-2 rounded-2xl bg-white border border-[#F0E8F0] text-xs text-[#29263B] placeholder-[#9692A5]/70 focus:outline-none focus:border-[#CDBFF5]"
+              />
+            </div>
+
+            <div id="reviewImagePreviewBox" class="hidden mt-2.5 relative inline-block">
+              <img id="reviewImagePreview" src="" alt="Preview" class="h-24 w-24 object-cover rounded-2xl border-2 border-white shadow-pastel-sm" />
+              <button
+                type="button"
+                onclick="clearReviewImageAttachment()"
+                class="cute-btn absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#29263B] text-white flex items-center justify-center text-xs shadow cursor-pointer"
+              >
+                <span class="material-symbols-rounded text-[14px]">close</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-end gap-2.5 pt-3 border-t border-[#F0E8F0]">
+            <button
+              type="button"
+              onclick="closeReviewModal()"
+              class="cute-btn px-5 py-2.5 rounded-full bg-white hover:bg-[#F9DCE7]/40 border border-[#F0E8F0] text-xs sm:text-sm font-medium text-[#9692A5] hover:text-[#29263B] cursor-pointer"
+            >
+              ยกเลิก
+            </button>
+            <button
+              type="submit"
+              id="reviewSubmitBtn"
+              class="cute-btn cute-gradient-flow inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#F5A6C1] via-[#CDBFF5] to-[#F5A6C1] text-white text-xs sm:text-sm font-semibold shadow-pastel-sm cursor-pointer"
+            >
+              <span id="reviewSubmitSpinner" class="hidden w-4 h-4 rounded-full border-2 border-white/40 border-t-white cute-spinner-ring"></span>
+              <span id="reviewSubmitCheckIcon" class="material-symbols-rounded text-[18px]">check</span>
+              <span id="reviewSubmitBtnText">บันทึกรีวิว</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 2: ADMIN PASSCODE VERIFICATION MODAL                -->
+  <!-- ========================================================= -->
+  <div id="adminLoginModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#29263B]/35 backdrop-blur-sm">
+    <div id="adminLoginModalCard" class="bg-[#FFFAF8] border border-white rounded-[32px] w-full max-w-md shadow-pastel-lg p-6 sm:p-7">
+      <div class="flex items-center justify-between pb-4 border-b border-[#F0E8F0]">
+        <div class="flex items-center gap-3">
+          <div class="gentle-bob w-11 h-11 rounded-2xl bg-gradient-to-br from-[#CDBFF5] to-[#F5A6C1] flex items-center justify-center text-white shadow-pastel-sm">
+            <span class="material-symbols-rounded text-[22px]">vpn_key</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-[#29263B]">เข้าสู่ระบบผู้ดูแล (Admin)</h3>
+            <p class="text-xs text-[#9692A5]">รหัสผ่านเริ่มต้น: admin1234</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeAdminLoginModal()" class="cute-btn w-9 h-9 rounded-full bg-white border border-[#F0E8F0] flex items-center justify-center text-[#9692A5] hover:text-[#29263B] cursor-pointer">
+          <span class="material-symbols-rounded text-[18px]">close</span>
+        </button>
+      </div>
+
+      <form onsubmit="handleAdminLoginSubmit(event)" class="space-y-4 mt-5">
+        <div>
+          <label for="adminPasswordInput" class="block text-xs font-semibold text-[#29263B] mb-1.5">
+            รหัสผ่านผู้ดูแลระบบ (Admin Passcode)
+          </label>
+          <div class="relative">
+            <input
+              type="password"
+              id="adminPasswordInput"
+              required
+              placeholder="กรอกรหัสผ่าน Admin..."
+              class="w-full pl-4 pr-11 py-3 rounded-2xl bg-white border border-[#F0E8F0] text-sm text-[#29263B] focus:outline-none focus:border-[#CDBFF5] focus:ring-2 focus:ring-[#E8E1FA]"
+            />
+            <button
+              type="button"
+              onclick="togglePasswordVisibility()"
+              class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#9692A5] hover:text-[#29263B] cursor-pointer"
+            >
+              <span id="pwdEyeIcon" class="material-symbols-rounded text-[18px]">visibility</span>
+            </button>
+          </div>
+          <p id="adminLoginError" class="hidden text-xs text-rose-500 mt-1.5 font-medium"></p>
+        </div>
+
+        <div class="flex items-center justify-end gap-2.5 pt-2">
+          <button
+            type="button"
+            onclick="closeAdminLoginModal()"
+            class="cute-btn px-5 py-2.5 rounded-full bg-white border border-[#F0E8F0] text-xs sm:text-sm font-medium text-[#9692A5] hover:text-[#29263B] cursor-pointer"
+          >
+            ยกเลิก
+          </button>
+          <button
+            type="submit"
+            class="cute-btn cute-gradient-flow inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#CDBFF5] via-[#F5A6C1] to-[#CDBFF5] text-white text-xs sm:text-sm font-semibold shadow-pastel-sm cursor-pointer"
+          >
+            <span class="material-symbols-rounded text-[18px]">verified_user</span>
+            <span>ยืนยันตัวตน</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 3: CUSTOM CONFIRMATION DIALOG (SPRING POP-UP)       -->
+  <!-- ========================================================= -->
+  <div id="confirmDialogModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#29263B]/35 backdrop-blur-sm">
+    <div id="confirmDialogCard" class="bg-[#FFFAF8] border border-white rounded-[30px] w-full max-w-sm shadow-pastel-lg p-6 text-center">
+      <div class="gentle-bob w-12 h-12 rounded-2xl bg-[#FFD8E8] text-[#C8527D] flex items-center justify-center mx-auto mb-3">
+        <span class="material-symbols-rounded text-[26px]">error</span>
+      </div>
+      <h3 id="confirmDialogTitle" class="text-lg font-bold text-[#29263B]">ยืนยันการทำรายการ</h3>
+      <p id="confirmDialogMessage" class="text-xs sm:text-sm text-[#9692A5] mt-1.5 leading-relaxed">
+        คุณต้องการดำเนินการนี้ใช่หรือไม่?
+      </p>
+      <div class="flex items-center justify-center gap-2.5 mt-5">
+        <button
+          id="confirmDialogCancelBtn"
+          class="cute-btn px-5 py-2.5 rounded-full bg-white border border-[#F0E8F0] text-xs sm:text-sm font-medium text-[#9692A5] hover:text-[#29263B] cursor-pointer"
+        >
+          ยกเลิก
+        </button>
+        <button
+          id="confirmDialogOkBtn"
+          class="cute-btn px-5 py-2.5 rounded-full bg-gradient-to-r from-[#F5A6C1] to-[#E5789D] text-white text-xs sm:text-sm font-semibold shadow-pastel-sm cursor-pointer"
+        >
+          ยืนยัน
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 4: IMAGE LIGHTBOX PREVIEW (SPRING POP-UP)           -->
+  <!-- ========================================================= -->
+  <div id="imageLightboxModal" onclick="closeImageLightbox()" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#29263B]/60 backdrop-blur-md cursor-zoom-out">
+    <div id="imageLightboxCard" class="relative max-w-2xl max-h-[85vh] rounded-[28px] overflow-hidden border-4 border-white shadow-2xl" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" alt="Review Attachment" class="max-h-[80vh] w-auto object-contain bg-white" />
+      <button
+        type="button"
+        onclick="closeImageLightbox()"
+        class="cute-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 text-[#29263B] flex items-center justify-center shadow cursor-pointer"
+      >
+        <span class="material-symbols-rounded text-[18px]">close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- FLOATING TOAST NOTIFICATION CONTAINER                     -->
+  <!-- ========================================================= -->
+  <div id="toastContainer" class="fixed top-4 right-4 z-50 flex flex-col gap-2 pointer-events-none max-w-xs sm:max-w-sm"></div>
+
+  <!-- ========================================================= -->
+  <!-- APPLICATION LOGIC: CuteMotionEngine + Full Admin Control  -->
+  <!-- ========================================================= -->
+  <script>
+    const API_URL = 'https://creditzon.minmeow.workers.dev';
+    const TOKEN_KEY = 'kumo_admin_token_v1';
+    const LIKED_KEY = 'kumo_liked_reviews_v1';
+    const UI_PREFS_KEY = 'kumo_matcha_ui_prefs_v1';
+    const CATEGORY_COLORS = ['#CDBFF5', '#F5A6C1', '#78B9F2', '#68C49E', '#F7C948', '#F4A28C'];
+
+    /**
+     * 1. CUTE MOTION UI ENGINE
+     */
+    class CuteMotionEngine {
+      constructor() {
+        this.reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+        this.ambientInterval = null;
+        this.activeAmbientCount = 0;
+        this.MAX_AMBIENT_PARTICLES = 7;
+      }
+
+      isReducedMotion() {
+        return this.reducedMotionQuery && this.reducedMotionQuery.matches;
+      }
+
+      startAmbientDecorations() {
+        if (this.isReducedMotion()) return;
+        const layer = document.getElementById('cuteAmbientLayer');
+        if (!layer) return;
+
+        this.ambientInterval = setInterval(() => {
+          if (document.hidden || this.isReducedMotion()) return;
+          if (this.activeAmbientCount >= this.MAX_AMBIENT_PARTICLES) return;
+
+          const particle = document.createElement('span');
+          const shapes = [
+            { icon: 'favorite', color: '#F5A6C1', size: '14px' },
+            { icon: 'auto_awesome', color: '#CDBFF5', size: '15px' },
+            { icon: 'local_florist', color: '#F9DCE7', size: '15px' },
+            { icon: 'circle', color: '#C6DFF8', size: '10px' },
+          ];
+          const chosen = shapes[Math.floor(Math.random() * shapes.length)];
+          const leftPct = 6 + Math.random() * 88;
+          const topPct = 35 + Math.random() * 55;
+          const dur = (6 + Math.random() * 4).toFixed(1) + 's';
+          const driftX = (Math.random() * 40 - 20).toFixed(0) + 'px';
+
+          particle.className = 'ambient-particle material-symbols-rounded g-icon-fill';
+          particle.textContent = chosen.icon;
+          particle.style.left = `${leftPct}%`;
+          particle.style.top = `${topPct}%`;
+          particle.style.color = chosen.color;
+          particle.style.fontSize = chosen.size;
+          particle.style.setProperty('--dur', dur);
+          particle.style.setProperty('--drift-x', driftX);
+
+          layer.appendChild(particle);
+          this.activeAmbientCount++;
+
+          setTimeout(() => {
+            particle.remove();
+            this.activeAmbientCount = Math.max(0, this.activeAmbientCount - 1);
+          }, parseFloat(dur) * 1000);
+        }, 2000);
+      }
+
+      spawnRatingSparkles(anchorEl) {
+        if (this.isReducedMotion() || !anchorEl) return;
+        const icons = ['auto_awesome', 'star', 'favorite', 'flare'];
+        const colors = ['#F5A6C1', '#CDBFF5', '#F7C948', '#78B9F2'];
+
+        for (let i = 0; i < 6; i++) {
+          const spark = document.createElement('span');
+          spark.className = 'rating-sparkle-particle material-symbols-rounded g-icon-fill';
+          spark.textContent = icons[i % icons.length];
+          spark.style.color = colors[i % colors.length];
+          spark.style.right = `${14 + (i % 3) * 10}px`;
+          spark.style.top = '2px';
+          spark.style.setProperty('--tx', `${(i - 2.5) * 14}px`);
+          anchorEl.appendChild(spark);
+          setTimeout(() => spark.remove(), 800);
+        }
+      }
+
+      launchConfetti() {
+        if (this.isReducedMotion()) return;
+        const colors = ['#F5A6C1', '#FFD8E8', '#CDBFF5', '#C6DFF8', '#D2EEE2', '#F7C948'];
+        const icons = ['circle', 'favorite', 'auto_awesome', 'star'];
+        const count = 36;
+
+        for (let i = 0; i < count; i++) {
+          const piece = document.createElement('span');
+          piece.className = 'confetti-piece material-symbols-rounded g-icon-fill';
+          piece.textContent = icons[i % icons.length];
+          piece.style.left = `${Math.random() * 100}vw`;
+          piece.style.color = colors[i % colors.length];
+          piece.style.fontSize = `${12 + Math.random() * 9}px`;
+          piece.style.setProperty('--cx', `${(Math.random() * 160 - 80).toFixed(0)}px`);
+          piece.style.setProperty('--rot', `${(360 + Math.random() * 540).toFixed(0)}deg`);
+          piece.style.setProperty('--fall-dur', `${(2.0 + Math.random() * 1.4).toFixed(2)}s`);
+          piece.style.animationDelay = `${(Math.random() * 0.25).toFixed(2)}s`;
+
+          document.body.appendChild(piece);
+          setTimeout(() => piece.remove(), 3700);
+        }
+      }
+
+      triggerReflowClass(el, className) {
+        if (!el) return;
+        el.classList.remove(className);
+        void el.offsetWidth;
+        el.classList.add(className);
+      }
+
+      shakeElement(el) {
+        this.triggerReflowClass(el, 'animate-cute-shake');
+      }
+
+      openModalWithSpring(backdropEl, cardEl) {
+        if (!backdropEl || !cardEl) return;
+        backdropEl.classList.remove('hidden', 'modal-backdrop-exit');
+        cardEl.classList.remove('modal-spring-exit');
+        backdropEl.classList.add('modal-backdrop-enter');
+        cardEl.classList.add('modal-spring-enter');
+      }
+
+      closeModalWithSpring(backdropEl, cardEl, onComplete) {
+        if (!backdropEl || !cardEl) return;
+        if (this.isReducedMotion()) {
+          backdropEl.classList.add('hidden');
+          if (onComplete) onComplete();
+          return;
+        }
+        backdropEl.classList.remove('modal-backdrop-enter');
+        cardEl.classList.remove('modal-spring-enter');
+        backdropEl.classList.add('modal-backdrop-exit');
+        cardEl.classList.add('modal-spring-exit');
+        setTimeout(() => {
+          backdropEl.classList.add('hidden');
+          backdropEl.classList.remove('modal-backdrop-exit');
+          cardEl.classList.remove('modal-spring-exit');
+          if (onComplete) onComplete();
+        }, 190);
+      }
+    }
+
+    const motion = new CuteMotionEngine();
+
+    /**
+     * 2. CLOUDFLARE WORKER API CLIENT
+     */
+    async function apiRequest(path, opts = {}) {
+      const token = localStorage.getItem(TOKEN_KEY) || '';
+      const res = await fetch(API_URL + path, {
+        method: opts.method || 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token,
+        },
+        body: opts.body ? JSON.stringify(opts.body) : undefined,
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'เกิดข้อผิดพลาดในการเชื่อมต่อ');
+      return data;
+    }
+
+    function softBgFromHex(hex) {
+      const h = String(hex || '#CDBFF5').replace('#', '');
+      if (h.length !== 6) return '#F9DCE7';
+      return `rgba(${parseInt(h.slice(0, 2), 16)},${parseInt(h.slice(2, 4), 16)},${parseInt(h.slice(4, 6), 16)},0.22)`;
+    }
+
+    function getLikedMap() {
+      try { return JSON.parse(localStorage.getItem(LIKED_KEY) || '{}'); } catch { return {}; }
+    }
+
+    function loadUiPrefs() {
+      try { return JSON.parse(localStorage.getItem(UI_PREFS_KEY) || '{}'); } catch { return {}; }
+    }
+
+    const savedPrefs = loadUiPrefs();
+    const state = {
+      currentMainView: 'review',
+      activeCategoryId: savedPrefs.activeCategoryId || 'all',
+      sortBy: savedPrefs.sortBy || 'newest',
+      starFilter: typeof savedPrefs.starFilter === 'number' ? savedPrefs.starFilter : 0,
+      adminSubTab: savedPrefs.adminSubTab || 'all',
+      adminStatusFilter: 'all',
+      adminSortOrder: 'newest',
+      adminSearchQuery: '',
+      adminCategoryFilter: 'all',
+      isAdminAuthenticated: Boolean(localStorage.getItem(TOKEN_KEY)),
+      shopProfile: null,
+      categories: [],
+      catDrafts: [],
+      approvedReviews: [],
+      allAdminReviews: [],
+      pendingCount: 0,
+      settings: { autoApproveReviews: true },
+      selectedModalRating: 5,
+      newlyCreatedReviewIds: new Set(),
+      isSubmittingReview: false,
+    };
+
+    function persistCurrentUiPrefs() {
+      try {
+        localStorage.setItem(UI_PREFS_KEY, JSON.stringify({
+          activeCategoryId: state.activeCategoryId,
+          sortBy: state.sortBy,
+          starFilter: state.starFilter,
+          adminSubTab: state.adminSubTab,
+        }));
+      } catch (_) {}
+    }
+
+    /**
+     * 3. INITIALIZATION & DATA SYNC
+     */
+    async function initApp() {
+      motion.startAmbientDecorations();
+      renderSkeletonReviews(2);
+      setupModalStarDisplay();
+      await refreshPublicData();
+      updateNavigationUI();
+
+      document.addEventListener('click', (e) => {
+        const menu = document.getElementById('threeDotDropdown');
+        const btn = document.getElementById('threeDotMenuBtn');
+        if (menu && !menu.classList.contains('hidden') && !menu.contains(e.target) && !btn.contains(e.target)) {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    function updateRealtimeClockLabel() {
+      const el = document.getElementById('realtimeSyncStatusText');
+      const dot = document.getElementById('syncDot');
+      if (!el) return;
+      const now = new Date();
+      const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+      if (dot) dot.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0';
+      el.textContent = `เชื่อมต่อสำเร็จ (${timeStr} น.)`;
+    }
+
+    async function refreshPublicData() {
+      try {
+        const data = await apiRequest('/api/public');
+        state.shopProfile = data.shopProfile;
+        state.categories = data.categories || [];
+        state.approvedReviews = data.approvedReviews || [];
+        state.pendingCount = data.pendingCount || 0;
+        state.settings = data.settings || { autoApproveReviews: true };
+
+        if (state.activeCategoryId !== 'all' && !state.categories.some(c => c.id === state.activeCategoryId)) {
+          state.activeCategoryId = 'all';
+        }
+
+        renderShopProfile();
+        renderStatisticsDashboard();
+        renderCategoryTabs();
+        renderThreeDotMenu();
+        renderReviewList();
+        updateNavigationUI();
+        updateRealtimeClockLabel();
+      } catch (err) {
+        const el = document.getElementById('realtimeSyncStatusText');
+        const dot = document.getElementById('syncDot');
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-amber-400 shrink-0';
+        if (el) el.textContent = 'ไม่สามารถเชื่อมต่อหลังบ้านชั่วคราว';
+      }
+    }
+
+    async function refreshAdminData() {
+      try {
+        const adminData = await apiRequest('/api/admin/dashboard');
+        state.isAdminAuthenticated = true;
+        state.shopProfile = adminData.shopProfile;
+        state.categories = adminData.categories || [];
+        state.catDrafts = state.categories.map(c => ({ ...c }));
+        state.allAdminReviews = adminData.reviews || [];
+        state.settings = adminData.settings || { autoApproveReviews: true };
+        state.pendingCount = state.allAdminReviews.filter(r => r.status === 'pending').length;
+
+        document.getElementById('adminPendingBadge').textContent = state.pendingCount;
+        document.getElementById('adminAllBadge').textContent = state.allAdminReviews.length;
+
+        renderShopProfile();
+        renderAdminSummaryCards();
+        renderAdminSubView();
+        updateNavigationUI();
+        updateRealtimeClockLabel();
+      } catch (err) {
+        localStorage.removeItem(TOKEN_KEY);
+        state.isAdminAuthenticated = false;
+        switchMainView('review');
+        showToast(err.message || 'กรุณาเข้าสู่ระบบ Admin ใหม่', 'error');
+      }
+    }
+
+    /**
+     * 4. SHOP PROFILE & STATISTICS RENDERING
+     */
+    function renderShopProfile() {
+      const p = state.shopProfile;
+      if (!p) return;
+
+      const coverEl = document.getElementById('shopCoverImg');
+      if (p.coverImage) {
+        coverEl.style.display = 'block';
+        coverEl.src = p.coverImage;
+      } else {
+        coverEl.style.display = 'none';
+      }
+
+      const avatarEl = document.getElementById('shopAvatarImg');
+      const fallbackEl = document.getElementById('shopAvatarFallback');
+      if (p.avatarImage) {
+        avatarEl.style.display = 'block';
+        avatarEl.src = p.avatarImage;
+        fallbackEl.classList.add('hidden');
+      } else {
+        avatarEl.style.display = 'none';
+        fallbackEl.classList.remove('hidden');
+        fallbackEl.classList.add('flex');
+      }
+
+      document.getElementById('shopBadgeTag').textContent = p.badgeTag || 'Official Matcha & Dessert Atelier';
+      document.getElementById('shopNameDisplay').textContent = p.name || '';
+      document.getElementById('shopDescDisplay').textContent = p.description || '';
+      document.getElementById('shopStatusText').textContent = p.statusText || 'เปิดให้บริการ • Open';
+      document.getElementById('shopResponseText').textContent = p.responseText || 'ตอบกลับไว 99%';
+
+      const quickCoverBtn = document.getElementById('quickEditCoverBtn');
+      if (state.isAdminAuthenticated) {
+        quickCoverBtn.classList.remove('hidden');
+        quickCoverBtn.classList.add('inline-flex');
+      } else {
+        quickCoverBtn.classList.add('hidden');
+        quickCoverBtn.classList.remove('inline-flex');
+      }
+    }
+
+    function renderStatisticsDashboard() {
+      const reviews = state.approvedReviews;
+      const total = reviews.length;
+
+      document.getElementById('statTotalReviews').textContent = total;
+      document.getElementById('donutCenterLabel').textContent = `${state.categories.length} หมวด`;
+
+      const donutSvg = document.getElementById('donutChartSvg');
+
+      const catCounts = state.categories.map(cat => ({
+        ...cat,
+        count: reviews.filter(r => r.categoryId === cat.id).length,
+      }));
+
+      const radius = 36;
+      const circumference = 2 * Math.PI * radius;
+      let cumulativePercent = 0;
+      let svgPaths = '';
+
+      if (total === 0) {
+        svgPaths = `<circle cx="50" cy="50" r="${radius}" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="12" />`;
+      } else {
+        catCounts.forEach(item => {
+          const pct = item.count / total;
+          if (pct <= 0) return;
+          const strokeDasharray = `${pct * circumference} ${circumference}`;
+          const strokeDashoffset = -cumulativePercent * circumference;
+          cumulativePercent += pct;
+
+          svgPaths += `
+            <circle
+              cx="50" cy="50" r="${radius}"
+              fill="none"
+              stroke="${item.accent}"
+              stroke-width="12"
+              stroke-dasharray="${strokeDasharray}"
+              stroke-dashoffset="${strokeDashoffset}"
+              transform="rotate(-90 50 50)"
+              class="transition-all duration-500 hover:opacity-80 cursor-pointer"
+              onclick="selectCategoryTab('${item.id}')"
+            >
+              <title>${item.code} (${item.title}): ${item.count} รีวิว</title>
+            </circle>
+          `;
+        });
+      }
+
+      if (donutSvg) donutSvg.innerHTML = svgPaths;
+
+      const avg = total > 0 ? (reviews.reduce((sum, r) => sum + Number(r.rating), 0) / total) : 0;
+      document.getElementById('statAvgRating').textContent = avg.toFixed(1);
+
+      const starsRow = document.getElementById('statAvgStarsRow');
+      const roundedStars = Math.round(avg);
+      starsRow.innerHTML = [1, 2, 3, 4, 5].map(i => `
+        <span class="material-symbols-rounded text-[12px] sm:text-[16px] g-icon-fill ${i <= roundedStars && total > 0 ? 'text-[#F5B82E]' : 'text-[#E5D3DD]'}">star</span>
+      `).join('');
+
+      const badgeEl = document.getElementById('statRatingBadge');
+      if (total === 0) badgeEl.textContent = 'ยังไม่มีคะแนน';
+      else if (avg >= 4.7) badgeEl.textContent = 'ยอดเยี่ยม • Excellent';
+      else if (avg >= 4.0) badgeEl.textContent = 'ดีมาก • Very Good';
+      else if (avg >= 3.0) badgeEl.textContent = 'ปานกลาง • Good';
+      else badgeEl.textContent = 'กำลังพัฒนา';
+
+      const miniBarsEl = document.getElementById('starMiniBars');
+      miniBarsEl.innerHTML = [5, 4, 3, 2, 1].map(starVal => {
+        const count = reviews.filter(r => Number(r.rating) === starVal).length;
+        const pct = total > 0 ? Math.round((count / total) * 100) : 0;
+        return `
+          <div class="flex items-center gap-1 sm:gap-2 text-[9px] sm:text-xs leading-none">
+            <span class="font-num font-semibold text-[#29263B] w-5 sm:w-7 shrink-0 inline-flex items-center gap-0.5">${starVal}<span class="material-symbols-rounded text-[9px] sm:text-[12px] text-[#F5B82E] g-icon-fill">star</span></span>
+            <div class="flex-1 h-1 sm:h-2 rounded-full bg-white/85 overflow-hidden">
+              <div class="h-full rounded-full transition-all duration-700" style="width:${pct}%; background: linear-gradient(90deg, #F5A6C1, #CDBFF5);"></div>
+            </div>
+            <span class="font-num text-[#9692A5] w-4 sm:w-6 text-right shrink-0">${count}</span>
+          </div>
+        `;
+      }).join('');
+
+      const satisfactionPct = total > 0 ? Math.round((avg / 5) * 100) : 0;
+
+      document.getElementById('statSatisfactionPct').textContent = `${satisfactionPct}%`;
+
+      const ringCircle = document.getElementById('satisfactionRingCircle');
+      const ringCircumference = 2 * Math.PI * 44;
+      ringCircle.style.strokeDashoffset = ringCircumference - (satisfactionPct / 100) * ringCircumference;
+
+      const moodPill = document.getElementById('satisfactionMoodPill');
+      if (total === 0) {
+        moodPill.innerHTML = '<span class="material-symbols-rounded text-[14px] sm:text-[15px] text-emerald-500 g-icon-fill">eco</span><span>รอรับรีวิวแรกจากคุณ</span>';
+      } else if (satisfactionPct >= 90) {
+        moodPill.innerHTML = '<span class="material-symbols-rounded text-[14px] sm:text-[15px] text-[#7A66D6] g-icon-fill">auto_awesome</span><span>ประทับใจระดับพรีเมียม</span>';
+      } else if (satisfactionPct >= 75) {
+        moodPill.innerHTML = '<span class="material-symbols-rounded text-[14px] sm:text-[15px] text-[#E06D97] g-icon-fill">favorite</span><span>ลูกค้าชื่นชอบมาก</span>';
+      } else {
+        moodPill.innerHTML = '<span class="material-symbols-rounded text-[14px] sm:text-[15px] text-[#F5A6C1] g-icon-fill">local_florist</span><span>ขอบคุณทุกคำแนะนำ</span>';
+      }
+    }
+
+    /**
+     * 5. CATEGORY TABS & THREE-DOT MENU
+     */
+    function renderCategoryTabs() {
+      const container = document.getElementById('categoryTabsContainer');
+      const isAllActive = state.activeCategoryId === 'all';
+      const totalCount = state.approvedReviews.length;
+
+      const allTabHtml = `
+        <button
+          type="button"
+          role="tab"
+          aria-selected="${isAllActive}"
+          onclick="selectCategoryTab('all')"
+          class="cute-btn group inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap cursor-pointer shrink-0 ${
+            isAllActive
+              ? 'bg-gradient-to-r from-[#F9DCE7] to-[#FFD8E8]/90 text-[#29263B] border border-[#F5A6C1]/65 shadow-pastel-sm'
+              : 'bg-white/65 hover:bg-white text-[#9692A5] hover:text-[#29263B] border border-transparent'
+          }"
+        >
+          <span class="w-2 h-2 rounded-full transition-transform group-hover:scale-125 bg-gradient-to-r from-[#F5A6C1] to-[#CDBFF5]"></span>
+          <span>รีวิวทั้งหมด</span>
+          <span class="font-num text-[11px] px-2 py-0.5 rounded-full ${
+            isAllActive ? 'bg-white text-[#C8527D] font-bold' : 'bg-[#F0E8F0]/80 text-[#9692A5]'
+          }">
+            ${totalCount}
+          </span>
+        </button>
+      `;
+
+      const categoryTabsHtml = state.categories.map(cat => {
+        const isActive = cat.id === state.activeCategoryId;
+        const count = state.approvedReviews.filter(r => r.categoryId === cat.id).length;
+
+        return `
+          <button
+            type="button"
+            role="tab"
+            aria-selected="${isActive}"
+            onclick="selectCategoryTab('${cat.id}')"
+            class="cute-btn group inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap cursor-pointer shrink-0 ${
+              isActive
+                ? 'bg-gradient-to-r from-[#F9DCE7] to-[#FFD8E8]/90 text-[#29263B] border border-[#F5A6C1]/65 shadow-pastel-sm'
+                : 'bg-white/65 hover:bg-white text-[#9692A5] hover:text-[#29263B] border border-transparent'
+            }"
+          >
+            <span class="w-2 h-2 rounded-full transition-transform group-hover:scale-125" style="background:${cat.accent}"></span>
+            <span>${escapeHtml(cat.code)}</span>
+            <span class="hidden md:inline font-normal text-xs opacity-80">• ${escapeHtml(cat.title)}</span>
+            <span class="font-num text-[11px] px-2 py-0.5 rounded-full ${
+              isActive ? 'bg-white text-[#C8527D] font-bold' : 'bg-[#F0E8F0]/80 text-[#9692A5]'
+            }">
+              ${count}
+            </span>
+          </button>
+        `;
+      }).join('');
+
+      container.innerHTML = allTabHtml + categoryTabsHtml;
+    }
+
+    function selectCategoryTab(categoryId) {
+      if (state.activeCategoryId === categoryId) return;
+      state.activeCategoryId = categoryId;
+      persistCurrentUiPrefs();
+      renderCategoryTabs();
+
+      renderSkeletonReviews(2);
+      setTimeout(() => {
+        renderReviewList();
+        const sectionEl = document.getElementById('reviewContentSection');
+        motion.triggerReflowClass(sectionEl, 'tab-content-slide');
+      }, 120);
+    }
+
+    function toggleThreeDotMenu(event) {
+      event.stopPropagation();
+      const dropdown = document.getElementById('threeDotDropdown');
+      const btn = document.getElementById('threeDotMenuBtn');
+      const isHidden = dropdown.classList.contains('hidden');
+      if (isHidden) {
+        renderThreeDotMenu();
+        dropdown.classList.remove('hidden');
+        motion.triggerReflowClass(dropdown, 'modal-spring-enter');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        dropdown.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function renderThreeDotMenu() {
+      const dropdown = document.getElementById('threeDotDropdown');
+      if (!dropdown) return;
+
+      if (state.isAdminAuthenticated) {
+        dropdown.innerHTML = `
+          <div class="px-3 py-2 border-b border-[#F0E8F0] mb-1">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-[#9692A5]">Admin Quick Actions</span>
+          </div>
+          <button type="button" onclick="closeThreeDotMenu(); openAddReviewModal(true)" class="cute-btn w-full flex items-center gap-2.5 px-3 py-2.5 rounded-2xl text-xs font-medium text-[#29263B] hover:bg-[#F9DCE7]/60 text-left cursor-pointer">
+            <span class="material-symbols-rounded text-[18px] text-[#E06D97]">add_circle</span>
+            <span>+ Add Review (เพิ่มรีวิวใหม่)</span>
+          </button>
+          <button type="button" onclick="closeThreeDotMenu(); openAdminTab('categories')" class="cute-btn w-full flex items-center gap-2.5 px-3 py-2.5 rounded-2xl text-xs font-medium text-[#29263B] hover:bg-[#C6DFF8]/50 text-left cursor-pointer">
+            <span class="material-symbols-rounded text-[18px] text-[#5BA4E5]">folder_special</span>
+            <span>Manage Categories</span>
+          </button>
+          <button type="button" onclick="closeThreeDotMenu(); openAdminTab('pending')" class="cute-btn w-full flex items-center justify-between px-3 py-2.5 rounded-2xl text-xs font-medium text-[#29263B] hover:bg-[#E8E1FA]/60 text-left cursor-pointer">
+            <span class="flex items-center gap-2.5">
+              <span class="material-symbols-rounded text-[18px] text-[#7A66D6]">schedule</span>
+              <span>Review Pending Queue</span>
+            </span>
+            <span class="font-num px-2 py-0.5 rounded-full bg-[#FFD8E8] text-[#C8527D] text-[10px] font-bold">${state.pendingCount}</span>
+          </button>
+          <div class="my-1 border-t border-[#F0E8F0]"></div>
+          <button type="button" onclick="closeThreeDotMenu(); handleAdminLogout()" class="cute-btn w-full flex items-center gap-2.5 px-3 py-2.5 rounded-2xl text-xs font-semibold text-rose-500 hover:bg-rose-50 text-left cursor-pointer">
+            <span class="material-symbols-rounded text-[18px]">logout</span>
+            <span>Logout</span>
+          </button>
+        `;
+      } else {
+        dropdown.innerHTML = `
+          <div class="px-3 py-2 border-b border-[#F0E8F0] mb-1">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-[#9692A5]">เรียงลำดับ &amp; ตัวกรอง</span>
+          </div>
+          <button type="button" onclick="setSortOrder('newest')" class="cute-btn w-full flex items-center justify-between px-3 py-2 rounded-2xl text-xs font-medium text-[#29263B] hover:bg-[#F9DCE7]/50 cursor-pointer">
+            <span>Sort by Newest (ล่าสุด)</span>
+            ${state.sortBy === 'newest' ? '<span class="material-symbols-rounded text-[16px] text-[#E06D97]">check</span>' : ''}
+          </button>
+          <button type="button" onclick="setSortOrder('highest')" class="cute-btn w-full flex items-center justify-between px-3 py-2 rounded-2xl text-xs font-medium text-[#29263B] hover:bg-[#F9DCE7]/50 cursor-pointer">
+            <span>Highest Rating (คะแนนสูงสุด)</span>
+            ${state.sortBy === 'highest' ? '<span class="material-symbols-rounded text-[16px] text-[#E06D97]">check</span>' : ''}
+          </button>
+          <button type="button" onclick="setSortOrder('lowest')" class="cute-btn w-full flex items-center justify-between px-3 py-2 rounded-2xl text-xs font-medium text-[#29263B] hover:bg-[#F9DCE7]/50 cursor-pointer">
+            <span>Lowest Rating (คะแนนต่ำสุด)</span>
+            ${state.sortBy === 'lowest' ? '<span class="material-symbols-rounded text-[16px] text-[#E06D97]">check</span>' : ''}
+          </button>
+          <div class="my-1 border-t border-[#F0E8F0]"></div>
+          <div class="px-3 py-1.5 flex items-center justify-between gap-1">
+            <span class="text-[11px] text-[#9692A5]">Filter by Star:</span>
+            <div class="flex items-center gap-1">
+              ${[0, 5, 4].map(st => `
+                <button type="button" onclick="setStarFilter(${st})" class="cute-btn inline-flex items-center gap-0.5 px-2 py-1 rounded-lg text-[11px] font-semibold cursor-pointer ${
+                  state.starFilter === st ? 'bg-[#CDBFF5] text-white' : 'bg-[#F0E8F0]/70 text-[#29263B]'
+                }">${st === 0 ? 'All' : st + '<span class="material-symbols-rounded text-[11px] g-icon-fill">star</span>'}</button>
+              `).join('')}
+            </div>
+          </div>
+          <div class="my-1 border-t border-[#F0E8F0]"></div>
+          <button type="button" onclick="closeThreeDotMenu(); copyShopShareLink()" class="cute-btn w-full flex items-center gap-2.5 px-3 py-2 rounded-2xl text-xs font-medium text-[#29263B] hover:bg-[#C6DFF8]/50 cursor-pointer">
+            <span class="material-symbols-rounded text-[16px] text-[#5BA4E5]">link</span>
+            <span>Copy Shop Link</span>
+          </button>
+        `;
+      }
+    }
+
+    function closeThreeDotMenu() {
+      const dropdown = document.getElementById('threeDotDropdown');
+      const btn = document.getElementById('threeDotMenuBtn');
+      if (dropdown) dropdown.classList.add('hidden');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+
+    function setSortOrder(order) {
+      state.sortBy = order;
+      persistCurrentUiPrefs();
+      closeThreeDotMenu();
+      renderReviewList();
+    }
+
+    function setStarFilter(starVal) {
+      state.starFilter = starVal;
+      persistCurrentUiPrefs();
+      closeThreeDotMenu();
+      renderReviewList();
+    }
+
+    /**
+     * 6. RENDERING: SKELETON LOADER, REVIEW CARDS & EMPTY STATE
+     */
+    function renderSkeletonReviews(count = 2) {
+      const listContainer = document.getElementById('reviewListContainer');
+      if (!listContainer) return;
+      listContainer.innerHTML = Array.from({ length: count }).map(() => `
+        <div class="rounded-[22px] bg-[#FFFAF8] border border-[#F0E8F0] p-4 sm:p-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl skeleton-shimmer"></div>
+            <div class="space-y-2 flex-1">
+              <div class="h-3.5 w-32 rounded-full skeleton-shimmer"></div>
+              <div class="h-3 w-24 rounded-full skeleton-shimmer"></div>
+            </div>
+          </div>
+          <div class="h-3.5 w-full rounded-full skeleton-shimmer"></div>
+          <div class="h-3.5 w-3/4 rounded-full skeleton-shimmer"></div>
+        </div>
+      `).join('');
+    }
+
+    async function handleLikeReview(id) {
+      const liked = getLikedMap();
+      if (liked[id]) {
+        showToast('คุณกดถูกใจรีวิวนี้แล้วค่ะ', 'info');
+        return;
+      }
+      try {
+        const data = await apiRequest(`/api/reviews/${id}/like`, { method: 'POST' });
+        liked[id] = true;
+        localStorage.setItem(LIKED_KEY, JSON.stringify(liked));
+        const item = state.approvedReviews.find(r => r.id === id);
+        if (item) item.likes = data.likes;
+        renderReviewList();
+        showToast('ขอบคุณที่กดถูกใจรีวิวนี้นะคะ', 'success');
+      } catch (_) {}
+    }
+
+    function renderReviewList() {
+      const isAllView = state.activeCategoryId === 'all';
+      const activeCat = isAllView
+        ? null
+        : (state.categories.find(c => c.id === state.activeCategoryId) || state.categories[0]);
+
+      const pillEl = document.getElementById('activeTabPillBadge');
+      if (isAllView) {
+        pillEl.textContent = 'ทั้งหมด';
+        pillEl.style.backgroundColor = '#F9DCE7';
+        pillEl.style.color = '#C8527D';
+        document.getElementById('activeCategoryTitle').textContent = 'รีวิวทั้งหมดจากลูกค้า';
+        document.getElementById('activeCategorySubtitle').textContent = 'รวมความประทับใจและคะแนนรีวิวจากทุกหมวดหมู่';
+      } else if (activeCat) {
+        pillEl.textContent = activeCat.code;
+        pillEl.style.backgroundColor = activeCat.softBg;
+        pillEl.style.color = '#29263B';
+        document.getElementById('activeCategoryTitle').textContent = activeCat.title;
+        document.getElementById('activeCategorySubtitle').textContent = activeCat.subtitle;
+      }
+
+      let filtered = isAllView
+        ? [...state.approvedReviews]
+        : state.approvedReviews.filter(r => r.categoryId === activeCat.id);
+
+      const filterPill = document.getElementById('clearFilterPill');
+      if (state.starFilter > 0) {
+        filtered = filtered.filter(r => Number(r.rating) === state.starFilter);
+        filterPill.classList.remove('hidden');
+        filterPill.classList.add('inline-flex');
+        document.getElementById('clearFilterText').textContent = `กรอง: ${state.starFilter} ดาว`;
+      } else {
+        filterPill.classList.add('hidden');
+        filterPill.classList.remove('inline-flex');
+      }
+
+      if (state.sortBy === 'highest') {
+        filtered.sort((a, b) => b.rating - a.rating || b.createdAt - a.createdAt);
+      } else if (state.sortBy === 'lowest') {
+        filtered.sort((a, b) => a.rating - b.rating || b.createdAt - a.createdAt);
+      } else {
+        filtered.sort((a, b) => b.createdAt - a.createdAt);
+      }
+
+      document.getElementById('activeCategoryCountBadge').innerHTML = `
+        <span class="float-gentle text-[#F5A6C1]">
+          <span class="material-symbols-rounded text-[15px] g-icon-fill">chat_bubble</span>
+        </span>
+        <span class="font-num">${filtered.length} รีวิว</span>
+      `;
+
+      const listContainer = document.getElementById('reviewListContainer');
+
+      if (filtered.length === 0) {
+        const emptyTargetLabel = isAllView
+          ? 'ให้กับร้านค้ากันนะคะ'
+          : `ในหมวด <span class="font-semibold text-[#29263B]">${escapeHtml(activeCat.title)}</span> ให้ร้านค้ากันนะคะ`;
+
+        listContainer.innerHTML = `
+          <div class="py-10 sm:py-12 px-4 text-center rounded-[24px] bg-[#FFF6FA] border border-dashed border-[#F0E8F0] animate-fade-up">
+            <svg class="gentle-bob w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3" viewBox="0 0 140 140" fill="none">
+              <circle cx="70" cy="70" r="56" fill="#F9DCE7" fill-opacity="0.55"/>
+              <circle cx="105" cy="36" r="10" fill="#E8E1FA"/>
+              <circle cx="34" cy="96" r="8" fill="#C6DFF8"/>
+              <path d="M44 84C37.3726 84 32 78.6274 32 72C32 66.0853 36.2787 61.1695 41.9082 60.1816C44.5048 49.7405 53.9499 42 65.2 42C77.5293 42 87.6844 51.3004 89.0487 63.2665C94.1563 64.5736 98 69.2054 98 74.75C98 81.2393 92.7393 86.5 86.25 86.5H44V84Z" fill="white" stroke="#F5A6C1" stroke-width="2.5"/>
+              <circle cx="57" cy="68" r="2.5" fill="#29263B"/>
+              <circle cx="75" cy="68" r="2.5" fill="#29263B"/>
+              <path d="M63 72C64.5 74 67.5 74 69 72" stroke="#29263B" stroke-width="2" stroke-linecap="round"/>
+              <ellipse cx="52" cy="72" rx="3.5" ry="2" fill="#FFD8E8"/>
+              <ellipse cx="80" cy="72" rx="3.5" ry="2" fill="#FFD8E8"/>
+              <path d="M96 34L98.2 38.5L103.2 39.2L99.6 42.7L100.4 47.7L96 45.3L91.6 47.7L92.4 42.7L88.8 39.2L93.8 38.5L96 34Z" fill="#F7C948"/>
+            </svg>
+            <h3 class="text-base sm:text-lg font-bold text-[#29263B]">${isAllView ? 'ยังไม่มีรีวิวในระบบเลยค่ะ' : 'ยังไม่มีรีวิวในหมวดนี้เลยค่ะ'}</h3>
+            <p class="text-xs sm:text-sm text-[#9692A5] mt-1 max-w-md mx-auto">
+              มาร่วมแบ่งปันความประทับใจแรก${emptyTargetLabel}
+            </p>
+            <button
+              type="button"
+              onclick="openAddReviewModal(false)"
+              class="cute-btn cute-gradient-flow mt-4 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#F5A6C1] via-[#CDBFF5] to-[#F5A6C1] text-white text-xs sm:text-sm font-semibold shadow-pastel-sm cursor-pointer"
+            >
+              <span class="material-symbols-rounded text-[18px]">edit_square</span>
+              <span>เขียนรีวิวแรกเลย</span>
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      const likedMap = getLikedMap();
+      listContainer.innerHTML = filtered.map((review, index) => {
+        const revCat = state.categories.find(c => c.id === review.categoryId) || activeCat || { accent: '#F5A6C1', softBg: '#F9DCE7', code: 'Review', title: '' };
+        const initials = (review.reviewerName || 'U').trim().charAt(0).toUpperCase();
+        const isNewlyAdded = state.newlyCreatedReviewIds.has(review.id);
+        const isLiked = Boolean(likedMap[review.id]);
+        const starsHtml = [1, 2, 3, 4, 5].map(s => `
+          <span class="star-pop-item" style="animation-delay: ${Math.min(index * 55 + s * 45, 520)}ms">
+            <span class="material-symbols-rounded text-[15px] g-icon-fill ${s <= review.rating ? 'text-[#F5B82E]' : 'text-[#E5DFEC]'}">star</span>
+          </span>
+        `).join('');
+
+        const replyHtml = review.adminReply ? `
+          <div class="mt-3 p-3 rounded-2xl bg-gradient-to-r from-[#F8F5FF] to-[#FFF5FA] border border-[#E8E1FA] text-xs">
+            <div class="flex items-center gap-1.5 font-semibold text-[#7A66D6] mb-1">
+              <span class="material-symbols-rounded text-[15px] g-icon-fill">storefront</span>
+              <span>การตอบกลับจากร้านค้า</span>
+            </div>
+            <p class="text-[#29263B]/85 leading-relaxed whitespace-pre-line">${escapeHtml(review.adminReply)}</p>
+          </div>
+        ` : '';
+
+        return `
+          <article
+            style="animation-delay: ${Math.min(index * 55, 330)}ms"
+            class="review-card-item ${isNewlyAdded ? 'new-review-sparkle' : ''} relative rounded-[22px] bg-[#FFF6FA]/85 hover:bg-white border border-[#F0E8F0] p-4 sm:p-5 pl-5 sm:pl-7 shadow-pastel-sm overflow-hidden"
+          >
+            <div
+              class="absolute left-0 top-3 bottom-3 w-1.5 rounded-r-full"
+              style="background: linear-gradient(180deg, ${revCat.accent}, #CDBFF5);"
+            ></div>
+
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 sm:gap-3">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl flex items-center justify-center font-jakarta font-bold text-sm sm:text-base text-[#29263B] border-2 border-white shadow-sm shrink-0"
+                  style="background-color: ${review.avatarColor || '#FFD8E8'};"
+                >
+                  ${initials}
+                </div>
+                <div>
+                  <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                    <h3 class="text-sm sm:text-[15px] font-bold text-[#29263B]">${escapeHtml(review.reviewerName)}</h3>
+                    ${isAllView ? `
+                      <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold" style="background:${revCat.softBg}; color:#29263B;">
+                        <span class="w-1.5 h-1.5 rounded-full" style="background:${revCat.accent}"></span>
+                        ${escapeHtml(revCat.code)}${revCat.title ? ' • ' + escapeHtml(revCat.title) : ''}
+                      </span>
+                    ` : ''}
+                    ${isNewlyAdded ? `
+                      <span class="twinkle-bounce inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-[#FFD8E8] to-[#E8E1FA] text-[#C8527D]">
+                        <span class="material-symbols-rounded text-[12px] g-icon-fill">auto_awesome</span>
+                        <span>ใหม่ล่าสุด</span>
+                      </span>
+                    ` : ''}
+                  </div>
+                  <div class="flex items-center gap-1 mt-1">
+                    ${starsHtml}
+                    <span class="font-num text-xs font-bold text-[#29263B] bg-white px-2 py-0.5 rounded-full border border-[#F0E8F0] ml-1.5">
+                      ${Number(review.rating)} / 5
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-1.5 sm:gap-2 text-[11px] text-[#9692A5] bg-white px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full border border-[#F0E8F0] self-start shrink-0">
+                <span class="material-symbols-rounded text-[13px] text-[#F5A6C1]">calendar_today</span>
+                <span class="font-num">${escapeHtml(review.date)}</span>
+                <span>•</span>
+                <span class="material-symbols-rounded text-[13px] text-[#CDBFF5]">schedule</span>
+                <span class="font-num">${escapeHtml(review.time)}</span>
+              </div>
+            </div>
+
+            <p class="mt-3 sm:mt-3.5 text-xs sm:text-sm text-[#29263B]/90 leading-relaxed whitespace-pre-line">
+              ${escapeHtml(review.message)}
+            </p>
+
+            ${review.imageUrl ? `
+              <div class="mt-3.5">
+                <button
+                  type="button"
+                  onclick="openImageLightbox('${escapeAttr(review.imageUrl)}')"
+                  class="cute-btn group relative inline-block rounded-2xl overflow-hidden border-2 border-white shadow-pastel-sm cursor-zoom-in"
+                >
+                  <img
+                    src="${escapeAttr(review.imageUrl)}"
+                    alt="Customer photo"
+                    onerror="this.parentElement.style.display='none';"
+                    class="h-24 sm:h-28 w-24 sm:w-28 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <span class="absolute bottom-1.5 right-1.5 w-6 h-6 rounded-full bg-white/85 flex items-center justify-center text-[#29263B] opacity-0 group-hover:opacity-100 transition">
+                    <span class="material-symbols-rounded text-[14px]">open_in_full</span>
+                  </span>
+                </button>
+              </div>
+            ` : ''}
+
+            ${replyHtml}
+
+            <div class="mt-3 pt-2.5 border-t border-[#F0E8F0]/70 flex items-center justify-end">
+              <button
+                type="button"
+                onclick="handleLikeReview('${review.id}')"
+                class="cute-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border cursor-pointer ${
+                  isLiked ? 'bg-[#FFD8E8] border-[#F5A6C1] text-[#C8527D]' : 'bg-white border-[#F0E8F0] text-[#9692A5] hover:text-[#E06D97]'
+                }"
+              >
+                <span class="material-symbols-rounded text-[15px] ${isLiked ? 'g-icon-fill text-[#E06D97]' : ''}">favorite</span>
+                <span>ถูกใจ</span>
+                <span class="font-num font-bold">${review.likes || 0}</span>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    /**
+     * 7. NAVIGATION & ADMIN VIEW SWITCHING
+     */
+    async function switchMainView(view) {
+      if (view === 'admin') {
+        const token = localStorage.getItem(TOKEN_KEY);
+        if (!token) {
+          openAdminLoginModal();
+          return;
+        }
+        state.currentMainView = 'admin';
+        document.getElementById('publicView').classList.add('hidden');
+        document.getElementById('adminView').classList.remove('hidden');
+        document.getElementById('floatingAddReviewBtn').classList.add('hidden');
+        await refreshAdminData();
+      } else {
+        state.currentMainView = 'review';
+        document.getElementById('adminView').classList.add('hidden');
+        document.getElementById('publicView').classList.remove('hidden');
+        document.getElementById('floatingAddReviewBtn').classList.remove('hidden');
+        await refreshPublicData();
+      }
+      updateNavigationUI(true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openAdminTab(subTab) {
+      state.adminSubTab = subTab;
+      persistCurrentUiPrefs();
+      switchMainView('admin');
+    }
+
+    function updateNavigationUI(animatePop = false) {
+      const reviewBtn = document.getElementById('navReviewBtn');
+      const adminBtn = document.getElementById('navAdminBtn');
+      const reviewIcon = document.getElementById('navReviewIcon');
+      const adminIcon = document.getElementById('navAdminIcon');
+      const pendingDot = document.getElementById('navPendingDot');
+      const headerStatus = document.getElementById('headerAdminStatus');
+
+      if (state.currentMainView === 'review') {
+        reviewBtn.className = 'cute-btn inline-flex items-center gap-2 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#F5A6C1] to-[#F9DCE7] text-[#29263B] shadow-pastel-sm cursor-pointer';
+        adminBtn.className = 'cute-btn relative inline-flex items-center gap-2 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold text-[#9692A5] hover:text-[#29263B] cursor-pointer';
+        if (animatePop) motion.triggerReflowClass(reviewIcon, 'animate-icon-pop');
+      } else {
+        reviewBtn.className = 'cute-btn inline-flex items-center gap-2 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold text-[#9692A5] hover:text-[#29263B] cursor-pointer';
+        adminBtn.className = 'cute-btn relative inline-flex items-center gap-2 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#CDBFF5] to-[#E8E1FA] text-[#29263B] shadow-pastel-sm cursor-pointer';
+        if (animatePop) motion.triggerReflowClass(adminIcon, 'animate-icon-pop');
+      }
+
+      adminIcon.textContent = state.isAdminAuthenticated ? 'verified_user' : 'lock';
+      pendingDot.classList.toggle('hidden', state.pendingCount <= 0);
+
+      if (state.isAdminAuthenticated) {
+        headerStatus.classList.remove('hidden');
+        headerStatus.classList.add('flex');
+      } else {
+        headerStatus.classList.add('hidden');
+        headerStatus.classList.remove('flex');
+      }
+    }
+
+    /**
+     * 8. ADMIN CONTROL CENTER: KPI SUMMARY STRIP & FULL SUB-VIEWS
+     */
+    function renderAdminSummaryCards() {
+      const container = document.getElementById('adminSummaryCardsGrid');
+      if (!container) return;
+
+      const total = state.allAdminReviews.length;
+      const approved = state.allAdminReviews.filter(r => r.status === 'approved').length;
+      const pending = state.allAdminReviews.filter(r => r.status === 'pending').length;
+      const avg = total > 0
+        ? (state.allAdminReviews.reduce((s, r) => s + Number(r.rating), 0) / total).toFixed(1)
+        : '0.0';
+
+      container.innerHTML = `
+        <button type="button" onclick="state.adminStatusFilter='all'; switchAdminSubTab('all');" class="cute-btn p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-[#F8F5FF] to-[#E8E1FA]/60 border border-white text-left cursor-pointer">
+          <div class="flex items-center justify-between text-[11px] sm:text-xs text-[#9692A5]">
+            <span>รีวิวในระบบทั้งหมด</span>
+            <span class="material-symbols-rounded text-[17px] sm:text-[18px] text-[#7A66D6] g-icon-fill">forum</span>
+          </div>
+          <div class="font-num text-xl sm:text-2xl font-bold text-[#29263B] mt-1">${total}</div>
+        </button>
+
+        <button type="button" onclick="state.adminStatusFilter='approved'; switchAdminSubTab('all');" class="cute-btn p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-[#F2FBF7] to-[#D2EEE2]/65 border border-white text-left cursor-pointer">
+          <div class="flex items-center justify-between text-[11px] sm:text-xs text-[#9692A5]">
+            <span>เผยแพร่แล้ว (Approved)</span>
+            <span class="material-symbols-rounded text-[17px] sm:text-[18px] text-emerald-600 g-icon-fill">check_circle</span>
+          </div>
+          <div class="font-num text-xl sm:text-2xl font-bold text-[#29263B] mt-1">${approved}</div>
+        </button>
+
+        <button type="button" onclick="switchAdminSubTab('pending');" class="cute-btn p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-[#FFF5FA] to-[#FFD8E8]/65 border border-white text-left cursor-pointer">
+          <div class="flex items-center justify-between text-[11px] sm:text-xs text-[#9692A5]">
+            <span>คิวรออนุมัติ (Pending)</span>
+            <span class="material-symbols-rounded text-[17px] sm:text-[18px] text-[#E06D97] g-icon-fill">pending_actions</span>
+          </div>
+          <div class="font-num text-xl sm:text-2xl font-bold text-[#29263B] mt-1">${pending}</div>
+        </button>
+
+        <button type="button" onclick="switchAdminSubTab('categories');" class="cute-btn p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-[#F2F9FF] to-[#C6DFF8]/65 border border-white text-left cursor-pointer">
+          <div class="flex items-center justify-between text-[11px] sm:text-xs text-[#9692A5]">
+            <span>คะแนนเฉลี่ย / หมวดหมู่</span>
+            <span class="material-symbols-rounded text-[17px] sm:text-[18px] text-[#F5B82E] g-icon-fill">star</span>
+          </div>
+          <div class="font-num text-xl sm:text-2xl font-bold text-[#29263B] mt-1">${avg} <span class="text-xs font-normal text-[#9692A5]">(${state.categories.length} หมวด)</span></div>
+        </button>
+      `;
+    }
+
+    function switchAdminSubTab(tabName) {
+      state.adminSubTab = tabName;
+      if (tabName === 'categories') {
+        state.catDrafts = state.categories.map(c => ({ ...c }));
+      }
+      persistCurrentUiPrefs();
+      renderAdminSubView();
+    }
+
+    function syncCatDrafts() {
+      state.catDrafts = state.catDrafts.map((c, i) => {
+        const codeEl = document.getElementById(`catCode_${i}`);
+        const titleEl = document.getElementById(`catTitle_${i}`);
+        const subEl = document.getElementById(`catSubtitle_${i}`);
+        const accEl = document.getElementById(`catAccent_${i}`);
+        const acc = accEl ? accEl.value : c.accent;
+        return {
+          id: c.id,
+          code: codeEl ? (codeEl.value.trim() || `Review ${i + 1}`) : c.code,
+          title: titleEl ? titleEl.value.trim() : c.title,
+          subtitle: subEl ? subEl.value.trim() : c.subtitle,
+          accent: acc,
+          softBg: softBgFromHex(acc),
+        };
+      });
+    }
+
+    function selectCategorySwatch(idx, hex) {
+      syncCatDrafts();
+      if (!state.catDrafts[idx]) return;
+      state.catDrafts[idx].accent = hex;
+      state.catDrafts[idx].softBg = softBgFromHex(hex);
+      renderAdminSubView();
+    }
+
+    function moveCategoryRow(idx, dir) {
+      syncCatDrafts();
+      const target = idx + dir;
+      if (target < 0 || target >= state.catDrafts.length) return;
+      const tmp = state.catDrafts[idx];
+      state.catDrafts[idx] = state.catDrafts[target];
+      state.catDrafts[target] = tmp;
+      renderAdminSubView();
+    }
+
+    function addCategoryRow() {
+      syncCatDrafts();
+      const n = state.catDrafts.length + 1;
+      const acc = CATEGORY_COLORS[(n - 1) % CATEGORY_COLORS.length];
+      state.catDrafts.push({
+        id: `cat_${Date.now()}_${n}`,
+        code: `Review ${n}`,
+        title: `หมวดหมู่ใหม่ ${n}`,
+        subtitle: 'คำอธิบายหมวดหมู่รีวิว',
+        accent: acc,
+        softBg: softBgFromHex(acc),
+      });
+      renderAdminSubView();
+      showToast('เพิ่มหมวดหมู่ใหม่แล้ว กดบันทึกเพื่อแสดงบนหน้าเว็บ', 'info');
+    }
+
+    function confirmRemoveCategoryRow(idx) {
+      syncCatDrafts();
+      if (state.catDrafts.length <= 1) {
+        showToast('ต้องเหลืออย่างน้อย 1 หมวดหมู่ค่ะ', 'error');
+        return;
+      }
+      const targetName = state.catDrafts[idx].code || 'หมวดหมู่นี้';
+      openConfirmDialog(
+        'ลบหมวดหมู่รีวิว',
+        `คุณต้องการลบ "${targetName}" ใช่หรือไม่? รีวิวในหมวดนี้จะถูกย้ายไปยังหมวดหมู่แรกอัตโนมัติ`,
+        async () => {
+          state.catDrafts.splice(idx, 1);
+          await apiRequest('/api/admin/categories', {
+            method: 'PUT',
+            body: { categories: state.catDrafts, fallbackCategoryId: state.catDrafts[0].id },
+          });
+          showToast('ลบหมวดหมู่เรียบร้อยแล้ว', 'success');
+          await refreshAdminData();
+        }
+      );
+    }
+
+    function updateProfileLivePreview() {
+      const coverUrl = document.getElementById('adminShopCoverUrl')?.value.trim() || '';
+      const avatarUrl = document.getElementById('adminShopAvatarUrl')?.value.trim() || '';
+      const coverPrev = document.getElementById('adminCoverPreviewImg');
+      const avatarPrev = document.getElementById('adminAvatarPreviewImg');
+      if (coverPrev) {
+        if (coverUrl) {
+          coverPrev.src = coverUrl;
+          coverPrev.classList.remove('hidden');
+        } else {
+          coverPrev.classList.add('hidden');
+        }
+      }
+      if (avatarPrev) {
+        if (avatarUrl) {
+          avatarPrev.src = avatarUrl;
+          avatarPrev.classList.remove('hidden');
+        } else {
+          avatarPrev.classList.add('hidden');
+        }
+      }
+    }
+
+    function renderAdminSubView() {
+      ['all', 'pending', 'categories', 'profile'].forEach(t => {
+        const el = document.getElementById(`adminSubTab-${t}`);
+        if (!el) return;
+        el.className = t === state.adminSubTab
+          ? 'cute-btn admin-subtab inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap bg-gradient-to-r from-[#F9DCE7] to-[#E8E1FA] text-[#29263B] shadow-sm cursor-pointer'
+          : 'cute-btn admin-subtab inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white/75 hover:bg-white text-[#9692A5] hover:text-[#29263B] cursor-pointer';
+      });
+
+      const container = document.getElementById('adminSubViewContainer');
+
+      if (state.adminSubTab === 'all') {
+        let list = [...state.allAdminReviews];
+        if (state.adminStatusFilter !== 'all') list = list.filter(r => r.status === state.adminStatusFilter);
+        if (state.adminCategoryFilter !== 'all') list = list.filter(r => r.categoryId === state.adminCategoryFilter);
+        if (state.adminSearchQuery.trim()) {
+          const q = state.adminSearchQuery.toLowerCase();
+          list = list.filter(r =>
+            r.reviewerName.toLowerCase().includes(q) ||
+            r.message.toLowerCase().includes(q) ||
+            (r.adminReply && r.adminReply.toLowerCase().includes(q))
+          );
+        }
+
+        if (state.adminSortOrder === 'highest') {
+          list.sort((a, b) => Number(b.rating) - Number(a.rating) || b.createdAt - a.createdAt);
+        } else if (state.adminSortOrder === 'lowest') {
+          list.sort((a, b) => Number(a.rating) - Number(b.rating) || b.createdAt - a.createdAt);
+        } else if (state.adminSortOrder === 'likes') {
+          list.sort((a, b) => (b.likes || 0) - (a.likes || 0) || b.createdAt - a.createdAt);
+        } else {
+          list.sort((a, b) => b.createdAt - a.createdAt);
+        }
+
+        container.innerHTML = `
+          <div class="glass-card rounded-[28px] sm:rounded-[30px] p-4 sm:p-6 shadow-pastel-md space-y-5 animate-fade-up">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+              <div class="relative flex-1">
+                <span class="material-symbols-rounded text-[18px] text-[#9692A5] absolute left-4 top-1/2 -translate-y-1/2">search</span>
+                <input
+                  type="text"
+                  value="${escapeAttr(state.adminSearchQuery)}"
+                  oninput="state.adminSearchQuery = this.value; renderAdminSubView();"
+                  placeholder="ค้นหาชื่อผู้รีวิว ข้อความ หรือคำตอบกลับร้านค้า..."
+                  class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white border border-[#F0E8F0] text-xs sm:text-sm focus:outline-none focus:border-[#CDBFF5]"
+                />
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <select onchange="state.adminStatusFilter = this.value; renderAdminSubView();" class="px-3.5 py-2.5 rounded-full bg-white border border-[#F0E8F0] text-xs text-[#29263B]">
+                  <option value="all" ${state.adminStatusFilter === 'all' ? 'selected' : ''}>สถานะ: ทั้งหมด</option>
+                  <option value="approved" ${state.adminStatusFilter === 'approved' ? 'selected' : ''}>อนุมัติแล้ว (Approved)</option>
+                  <option value="pending" ${state.adminStatusFilter === 'pending' ? 'selected' : ''}>รออนุมัติ (Pending)</option>
+                </select>
+                <select onchange="state.adminCategoryFilter = this.value; renderAdminSubView();" class="px-3.5 py-2.5 rounded-full bg-white border border-[#F0E8F0] text-xs text-[#29263B]">
+                  <option value="all" ${state.adminCategoryFilter === 'all' ? 'selected' : ''}>ทุกหมวดหมู่ (All)</option>
+                  ${state.categories.map(c => `<option value="${c.id}" ${state.adminCategoryFilter === c.id ? 'selected' : ''}>${escapeHtml(c.code)} • ${escapeHtml(c.title)}</option>`).join('')}
+                </select>
+                <select onchange="state.adminSortOrder = this.value; renderAdminSubView();" class="px-3.5 py-2.5 rounded-full bg-white border border-[#F0E8F0] text-xs text-[#29263B]">
+                  <option value="newest" ${state.adminSortOrder === 'newest' ? 'selected' : ''}>เรียง: ล่าสุด</option>
+                  <option value="highest" ${state.adminSortOrder === 'highest' ? 'selected' : ''}>เรียง: คะแนนสูงสุด</option>
+                  <option value="lowest" ${state.adminSortOrder === 'lowest' ? 'selected' : ''}>เรียง: คะแนนต่ำสุด</option>
+                  <option value="likes" ${state.adminSortOrder === 'likes' ? 'selected' : ''}>เรียง: ถูกใจมากสุด</option>
+                </select>
+              </div>
+            </div>
+            <div class="space-y-3.5">
+              ${list.length === 0 ? '<p class="text-center text-sm text-[#9692A5] py-8">ไม่พบรายการรีวิวที่ตรงกับเงื่อนไข</p>' : list.map(rev => renderAdminReviewRow(rev, false)).join('')}
+            </div>
+          </div>
+        `;
+      } else if (state.adminSubTab === 'pending') {
+        const pendingList = state.allAdminReviews.filter(r => r.status === 'pending');
+        container.innerHTML = `
+          <div class="glass-card rounded-[28px] sm:rounded-[30px] p-4 sm:p-6 shadow-pastel-md space-y-5 animate-fade-up">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#F0E8F0]">
+              <div>
+                <h2 class="text-base sm:text-lg font-bold text-[#29263B]">รีวิวที่รอการอนุมัติ (${pendingList.length})</h2>
+                <p class="text-xs text-[#9692A5]">ตรวจสอบข้อความ รูปภาพแนบ และคะแนนดาวก่อนอนุมัติขึ้นหน้าโปรไฟล์ร้านค้า</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                ${pendingList.length > 0 ? `
+                  <button type="button" onclick="handleBulkApproveAll()" class="cute-btn inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#D2EEE2] hover:bg-emerald-200 text-xs font-semibold text-emerald-900 shadow-sm cursor-pointer">
+                    <span class="material-symbols-rounded text-[16px]">done_all</span>
+                    <span>อนุมัติทั้งหมด (${pendingList.length})</span>
+                  </button>
+                ` : ''}
+                <label class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FFFAF8] border border-[#F0E8F0] text-xs font-medium text-[#29263B] cursor-pointer">
+                  <input type="checkbox" ${state.settings.autoApproveReviews ? 'checked' : ''} onchange="toggleAutoApproveSetting(this.checked)" class="rounded accent-[#F5A6C1] w-4 h-4 cursor-pointer" />
+                  <span>เผยแพร่รีวิวใหม่ทันที (Auto-Approve)</span>
+                </label>
+              </div>
+            </div>
+            ${pendingList.length === 0 ? `
+              <div class="py-10 text-center rounded-3xl bg-[#FFFAF8] border border-dashed border-[#F0E8F0]">
+                <div class="gentle-bob w-12 h-12 rounded-2xl bg-[#D2EEE2] text-emerald-700 flex items-center justify-center mx-auto mb-2.5">
+                  <span class="material-symbols-rounded text-[26px]">check_circle</span>
+                </div>
+                <p class="text-sm font-semibold text-[#29263B]">ไม่มีรีวิวค้างตรวจสอบในขณะนี้</p>
+              </div>
+            ` : `<div class="space-y-3.5">${pendingList.map(rev => renderAdminReviewRow(rev, true)).join('')}</div>`}
+          </div>
+        `;
+      } else if (state.adminSubTab === 'categories') {
+        container.innerHTML = `
+          <form onsubmit="handleSaveCategories(event)" class="glass-card rounded-[28px] sm:rounded-[30px] p-4 sm:p-6 shadow-pastel-md space-y-5 animate-fade-up">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#F0E8F0]">
+              <div>
+                <h2 class="text-base sm:text-lg font-bold text-[#29263B]">จัดการหมวดหมู่รีวิว (เพิ่ม / แก้ไข / เรียงลำดับ / ลบ)</h2>
+                <p class="text-xs text-[#9692A5]">ปรับแต่งชื่อป้ายแท็บ หัวข้อ สีพาสเทล และเพิ่มหรือลบหมวดหมู่ได้ตามต้องการ</p>
+              </div>
+              <button type="button" onclick="addCategoryRow()" class="cute-btn inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#E8E1FA] text-xs font-semibold text-[#29263B] cursor-pointer self-start">
+                <span class="material-symbols-rounded text-[16px]">add</span>
+                <span>เพิ่มหมวดหมู่ใหม่</span>
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              ${state.catDrafts.map((cat, idx) => {
+                const revCountInCat = state.allAdminReviews.filter(r => r.categoryId === cat.id).length;
+                return `
+                  <div class="p-4 rounded-[24px] bg-[#FFFAF8] border border-[#F0E8F0] space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                      <div class="flex items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full" style="background:${cat.softBg}; color:#29263B;">
+                          <span class="w-2.5 h-2.5 rounded-full" style="background:${cat.accent}"></span>
+                          แท็บที่ ${idx + 1}
+                        </span>
+                        <span class="font-num text-[11px] text-[#9692A5] bg-white px-2.5 py-0.5 rounded-full border border-[#F0E8F0]">${revCountInCat} รีวิว</span>
+                      </div>
+                      <div class="flex items-center gap-1.5">
+                        <button type="button" onclick="moveCategoryRow(${idx}, -1)" title="เลื่อนขึ้น" class="cute-btn w-7 h-7 rounded-full bg-white border border-[#F0E8F0] text-xs cursor-pointer">↑</button>
+                        <button type="button" onclick="moveCategoryRow(${idx}, 1)" title="เลื่อนลง" class="cute-btn w-7 h-7 rounded-full bg-white border border-[#F0E8F0] text-xs cursor-pointer">↓</button>
+                        <input type="color" id="catAccent_${idx}" value="${cat.accent}" title="สีประจำหมวดหมู่" class="w-7 h-7 rounded-lg border-0 bg-transparent cursor-pointer" />
+                        <button type="button" onclick="confirmRemoveCategoryRow(${idx})" class="cute-btn px-2.5 py-1 rounded-full bg-rose-100 text-[11px] font-semibold text-rose-700 cursor-pointer">ลบ</button>
+                      </div>
+                    </div>
+
+                    <!-- Pastel Color Quick Swatches -->
+                    <div class="flex flex-wrap items-center gap-1.5">
+                      <span class="text-[11px] text-[#9692A5] mr-1">สีพาสเทล:</span>
+                      ${CATEGORY_COLORS.map(hex => `
+                        <button
+                          type="button"
+                          onclick="selectCategorySwatch(${idx}, '${hex}')"
+                          style="background:${hex}"
+                          class="w-5 h-5 rounded-full border-2 ${cat.accent.toLowerCase() === hex.toLowerCase() ? 'border-[#29263B] scale-110' : 'border-white'} shadow-sm cursor-pointer transition-transform"
+                          title="${hex}"
+                        ></button>
+                      `).join('')}
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      <div>
+                        <label class="block text-[11px] font-semibold text-[#9692A5] mb-1">ชื่อป้ายแท็บ</label>
+                        <input type="text" id="catCode_${idx}" required value="${escapeAttr(cat.code)}" class="w-full px-3.5 py-2 rounded-xl bg-white border border-[#F0E8F0] text-xs font-semibold text-[#29263B]" />
+                      </div>
+                      <div>
+                        <label class="block text-[11px] font-semibold text-[#9692A5] mb-1">ชื่อหัวข้อหมวดหมู่</label>
+                        <input type="text" id="catTitle_${idx}" required value="${escapeAttr(cat.title)}" class="w-full px-3.5 py-2 rounded-xl bg-white border border-[#F0E8F0] text-sm font-medium text-[#29263B]" />
+                      </div>
+                    </div>
+                    <div>
+                      <label class="block text-[11px] font-semibold text-[#9692A5] mb-1">คำอธิบายหมวดหมู่</label>
+                      <input type="text" id="catSubtitle_${idx}" value="${escapeAttr(cat.subtitle)}" class="w-full px-3.5 py-2 rounded-xl bg-white border border-[#F0E8F0] text-xs text-[#29263B]" />
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <div class="flex justify-end pt-2">
+              <button type="submit" class="cute-btn cute-gradient-flow inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#F5A6C1] via-[#CDBFF5] to-[#F5A6C1] text-white text-xs sm:text-sm font-semibold shadow-pastel-sm cursor-pointer">
+                <span class="material-symbols-rounded text-[18px]">save</span>
+                <span>บันทึกการตั้งค่าหมวดหมู่</span>
+              </button>
+            </div>
+          </form>
+        `;
+      } else if (state.adminSubTab === 'profile') {
+        const p = state.shopProfile;
+        container.innerHTML = `
+          <div class="space-y-6 animate-fade-up">
+            <form onsubmit="handleSaveShopProfile(event)" class="glass-card rounded-[28px] sm:rounded-[30px] p-4 sm:p-6 shadow-pastel-md space-y-4">
+              <div class="pb-3 border-b border-[#F0E8F0]">
+                <h2 class="text-base sm:text-lg font-bold text-[#29263B]">แก้ไขข้อมูลโปรไฟล์ร้านค้า</h2>
+                <p class="text-xs text-[#9692A5]">ปรับเปลี่ยนชื่อร้าน คำอธิบาย ป้ายไฮไลต์ ภาพปก และรูปโลโก้ร้านค้า</p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-[#29263B] mb-1">ชื่อร้านค้า</label>
+                  <input type="text" id="adminShopName" required value="${escapeAttr(p.name)}" class="w-full px-4 py-2.5 rounded-2xl bg-white border border-[#F0E8F0] text-sm" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-[#29263B] mb-1">ป้ายบนภาพปก (Badge Tag)</label>
+                  <input type="text" id="adminShopBadge" value="${escapeAttr(p.badgeTag || '')}" class="w-full px-4 py-2.5 rounded-2xl bg-white border border-[#F0E8F0] text-sm" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#29263B] mb-1">คำอธิบายร้านค้า</label>
+                <textarea id="adminShopDesc" rows="2" required class="w-full px-4 py-2.5 rounded-2xl bg-white border border-[#F0E8F0] text-sm resize-none">${escapeHtml(p.description)}</textarea>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-[#29263B] mb-1">สถานะร้านค้า</label>
+                  <input type="text" id="adminShopStatus" value="${escapeAttr(p.statusText || '')}" class="w-full px-4 py-2.5 rounded-2xl bg-white border border-[#F0E8F0] text-sm" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-[#29263B] mb-1">ป้ายไฮไลต์เพิ่มเติม</label>
+                  <input type="text" id="adminShopResponse" value="${escapeAttr(p.responseText || '')}" class="w-full px-4 py-2.5 rounded-2xl bg-white border border-[#F0E8F0] text-sm" />
+                </div>
+              </div>
+
+              <!-- Image URLs + Live Preview Cards -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div class="p-4 rounded-2xl bg-[#FFFAF8] border border-[#F0E8F0] space-y-2.5">
+                  <label class="block text-xs font-semibold text-[#29263B]">รูปภาพปก (Cover Image • แนะนำ 1200×400 px)</label>
+                  <div class="w-full h-28 rounded-2xl overflow-hidden bg-gradient-to-r from-[#FFD8E8] via-[#E8E1FA] to-[#C6DFF8] border border-white flex items-center justify-center">
+                    <img id="adminCoverPreviewImg" src="${escapeAttr(p.coverImage || '')}" alt="Cover Preview" class="${p.coverImage ? '' : 'hidden'} w-full h-full object-cover" onerror="this.classList.add('hidden')" />
+                  </div>
+                  <input type="text" id="adminShopCoverUrl" value="${escapeAttr(p.coverImage || '')}" oninput="updateProfileLivePreview()" placeholder="วางลิงก์รูปภาพปก (https://...)" class="w-full px-3.5 py-2 rounded-xl bg-white border border-[#F0E8F0] text-xs" />
+                  <label class="cute-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E8E1FA] text-xs font-semibold text-[#29263B] cursor-pointer">
+                    <span class="material-symbols-rounded text-[15px]">upload</span>
+                    <span>อัปโหลดภาพปก</span>
+                    <input type="file" accept="image/*" onchange="handleShopImageUpload(event, 'adminShopCoverUrl')" class="hidden" />
+                  </label>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-[#FFFAF8] border border-[#F0E8F0] space-y-2.5">
+                  <label class="block text-xs font-semibold text-[#29263B]">รูปโปรไฟล์ร้านค้า (Avatar • แนะนำ 500×500 px)</label>
+                  <div class="flex items-center gap-3">
+                    <div class="w-20 h-20 rounded-2xl overflow-hidden bg-gradient-to-br from-[#FFD8E8] to-[#C6DFF8] border-2 border-white shadow-sm flex items-center justify-center shrink-0">
+                      <img id="adminAvatarPreviewImg" src="${escapeAttr(p.avatarImage || '')}" alt="Avatar Preview" class="${p.avatarImage ? '' : 'hidden'} w-full h-full object-cover" onerror="this.classList.add('hidden')" />
+                    </div>
+                    <div class="flex-1 min-w-0 space-y-2">
+                      <input type="text" id="adminShopAvatarUrl" value="${escapeAttr(p.avatarImage || '')}" oninput="updateProfileLivePreview()" placeholder="วางลิงก์รูปโลโก้ (https://...)" class="w-full px-3.5 py-2 rounded-xl bg-white border border-[#F0E8F0] text-xs" />
+                      <label class="cute-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F9DCE7] text-xs font-semibold text-[#29263B] cursor-pointer">
+                        <span class="material-symbols-rounded text-[15px]">upload</span>
+                        <span>อัปโหลดรูปโปรไฟล์</span>
+                        <input type="file" accept="image/*" onchange="handleShopImageUpload(event, 'adminShopAvatarUrl')" class="hidden" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-end pt-2">
+                <button type="submit" class="cute-btn cute-gradient-flow inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#F5A6C1] via-[#CDBFF5] to-[#F5A6C1] text-white text-xs sm:text-sm font-semibold shadow-pastel-sm cursor-pointer">
+                  <span class="material-symbols-rounded text-[18px]">save</span>
+                  <span>บันทึกข้อมูลร้านค้า</span>
+                </button>
+              </div>
+            </form>
+
+            <!-- System Controls, Passcode & JSON Backup / Restore -->
+            <div class="glass-card rounded-[28px] sm:rounded-[30px] p-4 sm:p-6 shadow-pastel-md grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div>
+                  <h3 class="text-sm font-bold text-[#29263B] flex items-center gap-2 mb-2">
+                    <span class="material-symbols-rounded text-[18px] text-[#5BA4E5]">tune</span>
+                    <span>การเผยแพร่รีวิวจากลูกค้า</span>
+                  </h3>
+                  <label class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#FFFAF8] border border-[#F0E8F0] text-xs font-medium text-[#29263B] cursor-pointer">
+                    <input type="checkbox" ${state.settings.autoApproveReviews ? 'checked' : ''} onchange="toggleAutoApproveSetting(this.checked)" class="rounded accent-[#F5A6C1] w-4 h-4 cursor-pointer" />
+                    <span>เผยแพร่รีวิวใหม่ทันที (ปิดเพื่อเข้าคิวรออนุมัติ)</span>
+                  </label>
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-bold text-[#29263B] flex items-center gap-2 mb-2">
+                    <span class="material-symbols-rounded text-[18px] text-[#E06D97]">cloud_download</span>
+                    <span>สำรองข้อมูล &amp; นำเข้าข้อมูล (JSON Backup)</span>
+                  </h3>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <button type="button" onclick="handleExportBackupJson()" class="cute-btn inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#C6DFF8] text-xs font-semibold text-[#1F3A52] cursor-pointer">
+                      <span class="material-symbols-rounded text-[16px]">download</span>
+                      <span>ส่งออกไฟล์สำรอง (.json)</span>
+                    </button>
+                    <label class="cute-btn inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#D2EEE2] text-xs font-semibold text-emerald-900 cursor-pointer">
+                      <span class="material-symbols-rounded text-[16px]">upload_file</span>
+                      <span>นำเข้าข้อมูล (.json)</span>
+                      <input type="file" accept=".json,application/json" onchange="handleImportBackupJson(event)" class="hidden" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <form onsubmit="handleChangeAdminPassword(event)" class="space-y-2.5">
+                <h3 class="text-sm font-bold text-[#29263B] flex items-center gap-2">
+                  <span class="material-symbols-rounded text-[18px] text-[#7A66D6]">key</span>
+                  <span>เปลี่ยนรหัสผ่าน Admin</span>
+                </h3>
+                <p class="text-xs text-[#9692A5]">ตั้งรหัสผ่านใหม่สำหรับเข้าใช้งานหน้า Admin Control Center</p>
+                <div class="flex flex-wrap sm:flex-nowrap gap-2">
+                  <input type="password" id="newAdminPasscodeInput" minlength="4" required placeholder="รหัสผ่านใหม่ (อย่างน้อย 4 ตัวอักษร)" class="flex-1 min-w-0 px-4 py-2.5 rounded-2xl bg-white border border-[#F0E8F0] text-xs" />
+                  <button type="submit" class="cute-btn px-5 py-2.5 rounded-full bg-[#E8E1FA] hover:bg-[#CDBFF5] text-xs font-semibold text-[#29263B] cursor-pointer shrink-0">อัปเดต</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function renderAdminReviewRow(rev, isPendingMode) {
+      const cat = state.categories.find(c => c.id === rev.categoryId);
+      const initials = (rev.reviewerName || 'U').trim().charAt(0).toUpperCase();
+      return `
+        <div class="p-4 rounded-[24px] bg-[#FFFAF8] border border-[#F0E8F0] space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div class="flex items-start gap-3 flex-1 min-w-0">
+              <div
+                class="w-10 h-10 rounded-2xl flex items-center justify-center font-jakarta font-bold text-sm text-[#29263B] border-2 border-white shadow-sm shrink-0 mt-0.5"
+                style="background-color: ${rev.avatarColor || '#FFD8E8'};"
+              >
+                ${initials}
+              </div>
+
+              <div class="space-y-1.5 flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold" style="background:${cat ? cat.softBg : '#F9DCE7'}; color:#29263B;">
+                    ${cat ? `${escapeHtml(cat.code)} • ${escapeHtml(cat.title)}` : escapeHtml(rev.categoryId)}
+                  </span>
+                  <span class="font-bold text-sm text-[#29263B]">${escapeHtml(rev.reviewerName)}</span>
+                  <span class="font-num text-xs font-bold text-[#F5B82E] inline-flex items-center gap-0.5">
+                    <span class="material-symbols-rounded text-[14px] g-icon-fill">star</span>
+                    <span>${Number(rev.rating)} / 5</span>
+                  </span>
+                  <span class="font-num text-[11px] text-[#9692A5]">${escapeHtml(rev.date)} • ${escapeHtml(rev.time)}</span>
+                  <span class="font-num text-[11px] text-[#E06D97] inline-flex items-center gap-0.5">
+                    <span class="material-symbols-rounded text-[13px] g-icon-fill">favorite</span>
+                    <span>${rev.likes || 0}</span>
+                  </span>
+                  ${!isPendingMode ? `
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold ${
+                      rev.status === 'approved' ? 'bg-[#D2EEE2] text-emerald-800' : 'bg-[#FFD8E8] text-[#C8527D]'
+                    }">
+                      ${rev.status === 'approved' ? 'อนุมัติแล้ว' : 'รออนุมัติ'}
+                    </span>
+                  ` : ''}
+                </div>
+                <p class="text-xs sm:text-sm text-[#29263B]/85 whitespace-pre-line">${escapeHtml(rev.message)}</p>
+
+                ${rev.imageUrl ? `
+                  <div class="pt-1">
+                    <button type="button" onclick="openImageLightbox('${escapeAttr(rev.imageUrl)}')" class="cute-btn inline-flex items-center gap-2 p-1.5 rounded-2xl bg-white border border-[#F0E8F0] shadow-sm cursor-zoom-in">
+                      <img src="${escapeAttr(rev.imageUrl)}" alt="Attachment" class="w-14 h-14 object-cover rounded-xl" onerror="this.parentElement.style.display='none'" />
+                      <span class="text-[11px] text-[#9692A5] pr-2">ดูรูปแนบ</span>
+                    </button>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2 shrink-0 self-end sm:self-start">
+              ${rev.status === 'pending' ? `
+                <button type="button" onclick="handleApproveReview('${rev.id}')" class="cute-btn inline-flex items-center gap-1 px-3.5 py-2 rounded-full bg-[#D2EEE2] hover:bg-emerald-200 text-xs font-semibold text-emerald-900 cursor-pointer">
+                  <span class="material-symbols-rounded text-[16px]">check</span>
+                  <span>อนุมัติ</span>
+                </button>
+              ` : `
+                <button type="button" onclick="handleHideReview('${rev.id}')" class="cute-btn inline-flex items-center gap-1 px-3 py-2 rounded-full bg-[#F9DCE7]/75 hover:bg-[#FFD8E8] text-xs font-semibold text-[#C8527D] cursor-pointer">
+                  <span class="material-symbols-rounded text-[16px]">visibility_off</span>
+                  <span>ซ่อน</span>
+                </button>
+              `}
+              <button type="button" onclick="openEditReviewModal('${rev.id}')" class="cute-btn inline-flex items-center gap-1 px-3.5 py-2 rounded-full bg-[#E8E1FA] hover:bg-[#CDBFF5] text-xs font-semibold text-[#29263B] cursor-pointer">
+                <span class="material-symbols-rounded text-[16px]">edit</span>
+                <span>แก้ไข</span>
+              </button>
+              <button type="button" onclick="confirmDeleteReview('${rev.id}')" class="cute-btn inline-flex items-center gap-1 px-3.5 py-2 rounded-full bg-rose-100 hover:bg-rose-200 text-xs font-semibold text-rose-700 cursor-pointer">
+                <span class="material-symbols-rounded text-[16px]">delete</span>
+                <span>ลบ</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap sm:flex-nowrap gap-2 pt-2 border-t border-[#F0E8F0]/70">
+            <input type="text" id="replyInput_${rev.id}" value="${escapeAttr(rev.adminReply || '')}" placeholder="พิมพ์ข้อความตอบกลับจากร้านค้า..." class="flex-1 min-w-0 px-3.5 py-1.5 rounded-full bg-white border border-[#F0E8F0] text-xs" />
+            <button type="button" onclick="handleSaveAdminReply('${rev.id}')" class="cute-btn px-3.5 py-1.5 rounded-full bg-[#C6DFF8] text-xs font-semibold text-[#1F3A52] cursor-pointer shrink-0">ตอบกลับ</button>
+            ${rev.adminReply ? `
+              <button type="button" onclick="handleClearAdminReply('${rev.id}')" class="cute-btn px-3 py-1.5 rounded-full bg-white border border-[#F0E8F0] text-xs text-[#9692A5] hover:text-rose-600 cursor-pointer shrink-0">ล้างคำตอบ</button>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    /**
+     * 9. INTERACTIVE RATING STEPPER (- / +) & REVIEW MODAL POP-UPS
+     */
+    function setupModalStarDisplay() {
+      const group = document.getElementById('starSelectorGroup');
+      group.innerHTML = [1, 2, 3, 4, 5].map(val => `
+        <span id="modalStarWrapper_${val}" class="inline-flex items-center justify-center p-1 transition-transform duration-300">
+          <span id="modalStarIcon_${val}" class="material-symbols-rounded text-[26px] sm:text-[28px] text-[#F5B82E] g-icon-fill">star</span>
+        </span>
+      `).join('');
+      setModalStarRating(5, false);
+    }
+
+    function stepModalRating(delta) {
+      const current = Math.round(Number(state.selectedModalRating)) || 5;
+      if ((delta < 0 && current <= 1) || (delta > 0 && current >= 5)) return;
+      const nextVal = Math.min(5, Math.max(1, current + delta));
+      const triggerBtn = delta > 0 ? document.getElementById('ratingPlusBtn') : document.getElementById('ratingMinusBtn');
+      motion.triggerReflowClass(triggerBtn, 'animate-stepper-bounce');
+      setModalStarRating(nextVal, true, delta);
+    }
+
+    function setModalStarRating(val, animate = true, deltaHint = 0) {
+      const prevVal = Math.round(Number(state.selectedModalRating)) || 5;
+      const clamped = Math.min(5, Math.max(1, Math.round(Number(val) || 5)));
+      const direction = deltaHint !== 0 ? deltaHint : (clamped - prevVal);
+
+      state.selectedModalRating = clamped;
+      document.getElementById('reviewRatingInput').value = clamped;
+
+      const minusBtn = document.getElementById('ratingMinusBtn');
+      const plusBtn = document.getElementById('ratingPlusBtn');
+      if (minusBtn) minusBtn.disabled = clamped <= 1;
+      if (plusBtn) plusBtn.disabled = clamped >= 5;
+
+      const numEl = document.getElementById('ratingNumberDisplay');
+      const pillContainer = document.getElementById('ratingPillStepper');
+
+      if (numEl) {
+        numEl.textContent = String(clamped);
+        if (animate) {
+          motion.triggerReflowClass(numEl, 'animate-number-pop');
+          if (direction > 0) motion.spawnRatingSparkles(pillContainer);
+          else if (direction < 0) motion.triggerReflowClass(pillContainer, 'animate-pill-squash');
+        }
+      }
+
+      const moodLabels = {
+        5: '<span>5 คะแนน • ประทับใจมากที่สุด</span><span class="material-symbols-rounded text-[15px] text-[#F5B82E] g-icon-fill">auto_awesome</span>',
+        4: '<span>4 คะแนน • ดีมาก</span><span class="material-symbols-rounded text-[15px] text-[#E06D97] g-icon-fill">favorite</span>',
+        3: '<span>3 คะแนน • ปานกลาง</span><span class="material-symbols-rounded text-[15px] text-[#F5A6C1] g-icon-fill">local_florist</span>',
+        2: '<span>2 คะแนน • พอใช้</span><span class="material-symbols-rounded text-[15px] text-[#CDBFF5] g-icon-fill">spa</span>',
+        1: '<span>1 คะแนน • ควรปรับปรุง</span><span class="material-symbols-rounded text-[15px] text-[#78B9F2] g-icon-fill">cloud</span>',
+      };
+      const moodEl = document.getElementById('starRatingMoodPill');
+      if (moodEl) moodEl.innerHTML = moodLabels[clamped] || moodLabels[5];
+
+      for (let i = 1; i <= 5; i++) {
+        const icon = document.getElementById(`modalStarIcon_${i}`);
+        const wrapper = document.getElementById(`modalStarWrapper_${i}`);
+        if (!icon) continue;
+        if (i <= clamped) {
+          icon.classList.add('text-[#F5B82E]', 'g-icon-fill', 'drop-shadow-[0_2px_6px_rgba(247,201,72,0.55)]');
+          icon.classList.remove('text-[#D8D2E3]');
+          if (animate && i === clamped && wrapper) motion.triggerReflowClass(wrapper, 'animate-icon-pop');
+        } else {
+          icon.classList.remove('text-[#F5B82E]', 'drop-shadow-[0_2px_6px_rgba(247,201,72,0.55)]');
+          icon.classList.add('text-[#D8D2E3]');
+        }
+      }
+    }
+
+    function populateModalCategories(selectedId) {
+      const select = document.getElementById('reviewCategoryInput');
+      const validSelectedId = selectedId && selectedId !== 'all' ? selectedId : (state.categories[0]?.id || 'review_1');
+      select.innerHTML = state.categories.map(c => `
+        <option value="${c.id}" ${c.id === validSelectedId ? 'selected' : ''}>${escapeHtml(c.code)} — ${escapeHtml(c.title)}</option>
+      `).join('');
+    }
+
+    function resetReviewModalOverlays() {
+      document.getElementById('reviewModalSuccessState').classList.add('hidden');
+      document.getElementById('reviewModalFormWrapper').classList.remove('hidden');
+      setSubmitButtonLoading(false);
+    }
+
+    function setSubmitButtonLoading(isLoading) {
+      const btn = document.getElementById('reviewSubmitBtn');
+      const spinner = document.getElementById('reviewSubmitSpinner');
+      const checkIcon = document.getElementById('reviewSubmitCheckIcon');
+      const btnText = document.getElementById('reviewSubmitBtnText');
+      if (!btn) return;
+      btn.disabled = isLoading;
+      spinner.classList.toggle('hidden', !isLoading);
+      if (checkIcon) checkIcon.classList.toggle('hidden', isLoading);
+      btnText.textContent = isLoading ? 'กำลังบันทึก...' : 'บันทึกรีวิว';
+    }
+
+    function openAddReviewModal(isAdminCreate = false) {
+      resetReviewModalOverlays();
+      document.getElementById('editReviewId').value = '';
+      document.getElementById('isAdminDirectCreate').value = isAdminCreate ? 'true' : 'false';
+      document.getElementById('reviewModalTitle').textContent = isAdminCreate ? 'เพิ่มรีวิวใหม่ (Admin)' : 'เขียนรีวิวร้านค้า';
+      document.getElementById('reviewModalSubtitle').textContent = isAdminCreate
+        ? 'รีวิวที่สร้างโดย Admin จะเผยแพร่บนหน้าโปรไฟล์ทันที'
+        : 'แบ่งปันประสบการณ์ความประทับใจของคุณ';
+
+      document.getElementById('reviewerNameInput').value = '';
+      document.getElementById('reviewMessageInput').value = '';
+      clearReviewImageAttachment();
+      populateModalCategories(state.activeCategoryId);
+      setModalStarRating(5, false);
+
+      const extraFields = document.getElementById('adminReviewExtraFields');
+      extraFields.classList.add('hidden');
+      extraFields.classList.remove('grid');
+
+      motion.openModalWithSpring(document.getElementById('reviewModal'), document.getElementById('reviewModalCard'));
+    }
+
+    function openEditReviewModal(reviewId) {
+      const rev = state.allAdminReviews.find(r => r.id === reviewId);
+      if (!rev) return;
+
+      resetReviewModalOverlays();
+      document.getElementById('editReviewId').value = rev.id;
+      document.getElementById('isAdminDirectCreate').value = 'false';
+      document.getElementById('reviewModalTitle').textContent = 'แก้ไขข้อมูลรีวิว';
+      document.getElementById('reviewModalSubtitle').textContent = 'ปรับปรุงรายละเอียด คะแนน หรือสถานะการแสดงผล';
+
+      document.getElementById('reviewerNameInput').value = rev.reviewerName;
+      document.getElementById('reviewMessageInput').value = rev.message;
+      populateModalCategories(rev.categoryId);
+      setModalStarRating(Number(rev.rating) || 5, false);
+
+      document.getElementById('editReviewDateInput').value = rev.date;
+      document.getElementById('editReviewTimeInput').value = rev.time;
+      document.getElementById('editReviewStatusInput').value = rev.status;
+
+      const extraFields = document.getElementById('adminReviewExtraFields');
+      extraFields.classList.remove('hidden');
+      extraFields.classList.add('grid');
+
+      if (rev.imageUrl) {
+        document.getElementById('reviewImageUrlInput').value = rev.imageUrl;
+        document.getElementById('reviewImagePreview').src = rev.imageUrl;
+        document.getElementById('reviewImagePreviewBox').classList.remove('hidden');
+      } else {
+        clearReviewImageAttachment();
+      }
+
+      motion.openModalWithSpring(document.getElementById('reviewModal'), document.getElementById('reviewModalCard'));
+    }
+
+    function closeReviewModal() {
+      if (state.isSubmittingReview) return;
+      motion.closeModalWithSpring(document.getElementById('reviewModal'), document.getElementById('reviewModalCard'), resetReviewModalOverlays);
+    }
+
+    function handleReviewImageUpload(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      compressImageFile(file, 720, (dataUrl) => {
+        document.getElementById('reviewImageUrlInput').value = dataUrl;
+        document.getElementById('reviewImagePreview').src = dataUrl;
+        document.getElementById('reviewImagePreviewBox').classList.remove('hidden');
+      });
+    }
+
+    function handleReviewImageUrlChange(url) {
+      const trimmed = url.trim();
+      if (trimmed) {
+        document.getElementById('reviewImagePreview').src = trimmed;
+        document.getElementById('reviewImagePreviewBox').classList.remove('hidden');
+      } else {
+        document.getElementById('reviewImagePreviewBox').classList.add('hidden');
+      }
+    }
+
+    function clearReviewImageAttachment() {
+      document.getElementById('reviewImageFileInput').value = '';
+      document.getElementById('reviewImageUrlInput').value = '';
+      document.getElementById('reviewImagePreview').src = '';
+      document.getElementById('reviewImagePreviewBox').classList.add('hidden');
+    }
+
+    function handleShopImageUpload(event, targetInputId) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      compressImageFile(file, 1100, (dataUrl) => {
+        const input = document.getElementById(targetInputId);
+        if (input) input.value = dataUrl;
+        updateProfileLivePreview();
+        showToast('อัปโหลดรูปภาพเรียบร้อย กดบันทึกเพื่อใช้งาน', 'success');
+      });
+    }
+
+    function compressImageFile(file, maxDim, callback) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          let w = img.width, h = img.height;
+          if (w > maxDim || h > maxDim) {
+            if (w > h) { h = Math.round((h * maxDim) / w); w = maxDim; }
+            else { w = Math.round((w * maxDim) / h); h = maxDim; }
+          }
+          canvas.width = w;
+          canvas.height = h;
+          canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+          callback(canvas.toDataURL('image/jpeg', 0.82));
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    async function handleReviewFormSubmit(event) {
+      event.preventDefault();
+      if (state.isSubmittingReview) return;
+
+      const editId = document.getElementById('editReviewId').value;
+      const isAdminCreate = document.getElementById('isAdminDirectCreate').value === 'true';
+      const reviewerName = document.getElementById('reviewerNameInput').value.trim();
+      const message = document.getElementById('reviewMessageInput').value.trim();
+
+      if (!reviewerName || !message) {
+        motion.shakeElement(document.getElementById('reviewModalCard'));
+        showToast('กรุณากรอกชื่อผู้รีวิวและข้อความรีวิวให้ครบถ้วน', 'error');
+        return;
+      }
+
+      const payload = {
+        reviewerName,
+        categoryId: document.getElementById('reviewCategoryInput').value,
+        rating: Number(document.getElementById('reviewRatingInput').value),
+        message,
+        imageUrl: document.getElementById('reviewImageUrlInput').value.trim(),
+      };
+
+      state.isSubmittingReview = true;
+      setSubmitButtonLoading(true);
+
+      try {
+        if (editId) {
+          payload.date = document.getElementById('editReviewDateInput').value;
+          payload.time = document.getElementById('editReviewTimeInput').value;
+          payload.status = document.getElementById('editReviewStatusInput').value;
+          await apiRequest(`/api/admin/reviews/${editId}`, { method: 'PUT', body: payload });
+          state.isSubmittingReview = false;
+          closeReviewModal();
+          showToast('แก้ไขข้อมูลรีวิวเรียบร้อยแล้ว', 'success');
+          await refreshAdminData();
+        } else {
+          payload.fromAdmin = isAdminCreate;
+          const res = await apiRequest('/api/reviews', { method: 'POST', body: payload });
+          if (res.review && res.review.id) {
+            state.newlyCreatedReviewIds.add(res.review.id);
+          }
+
+          setSubmitButtonLoading(false);
+          document.getElementById('reviewModalFormWrapper').classList.add('hidden');
+          const successBox = document.getElementById('reviewModalSuccessState');
+          const successTxt = document.getElementById('reviewModalSuccessText');
+          successTxt.textContent = res.status === 'approved'
+            ? 'รีวิวของคุณแสดงผลบนหน้าโปรไฟล์ร้านค้าและอัปเดตสถิติเรียบร้อยแล้ว'
+            : 'ส่งรีวิวสำเร็จ! รีวิวของคุณถูกส่งไปยัง Admin เพื่อตรวจสอบก่อนแสดงผลค่ะ';
+          successBox.classList.remove('hidden');
+
+          motion.launchConfetti();
+
+          if (isAdminCreate) {
+            await refreshAdminData();
+          } else {
+            if (state.activeCategoryId !== 'all') {
+              state.activeCategoryId = payload.categoryId;
+              persistCurrentUiPrefs();
+            }
+            await refreshPublicData();
+          }
+
+          setTimeout(() => {
+            state.isSubmittingReview = false;
+            closeReviewModal();
+          }, 1250);
+        }
+      } catch (err) {
+        state.isSubmittingReview = false;
+        setSubmitButtonLoading(false);
+        motion.shakeElement(document.getElementById('reviewModalCard'));
+        showToast(err.message || 'เกิดข้อผิดพลาดในการบันทึก', 'error');
+      }
+    }
+
+    /**
+     * 10. ADMIN MODAL, BULK ACTIONS, BACKUP/RESTORE & CRUD HANDLERS
+     */
+    function openAdminLoginModal() {
+      document.getElementById('adminPasswordInput').value = '';
+      document.getElementById('adminLoginError').classList.add('hidden');
+      motion.openModalWithSpring(document.getElementById('adminLoginModal'), document.getElementById('adminLoginModalCard'));
+      setTimeout(() => document.getElementById('adminPasswordInput').focus(), 100);
+    }
+
+    function closeAdminLoginModal() {
+      motion.closeModalWithSpring(document.getElementById('adminLoginModal'), document.getElementById('adminLoginModalCard'));
+    }
+
+    function togglePasswordVisibility() {
+      const input = document.getElementById('adminPasswordInput');
+      const icon = document.getElementById('pwdEyeIcon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.textContent = 'visibility_off';
+      } else {
+        input.type = 'password';
+        icon.textContent = 'visibility';
+      }
+    }
+
+    async function handleAdminLoginSubmit(event) {
+      event.preventDefault();
+      const pwd = document.getElementById('adminPasswordInput').value;
+      const errEl = document.getElementById('adminLoginError');
+      errEl.classList.add('hidden');
+
+      try {
+        const data = await apiRequest('/api/admin/login', { method: 'POST', body: { password: pwd } });
+        localStorage.setItem(TOKEN_KEY, data.session.token);
+        state.isAdminAuthenticated = true;
+        closeAdminLoginModal();
+        showToast('เข้าสู่ระบบ Admin สำเร็จ', 'success');
+        await switchMainView('admin');
+      } catch (err) {
+        errEl.textContent = err.message;
+        errEl.classList.remove('hidden');
+        motion.shakeElement(document.getElementById('adminLoginModalCard'));
+      }
+    }
+
+    async function handleAdminLogout() {
+      localStorage.removeItem(TOKEN_KEY);
+      state.isAdminAuthenticated = false;
+      showToast('ออกจากระบบ Admin เรียบร้อยแล้ว', 'info');
+      await switchMainView('review');
+    }
+
+    async function handleApproveReview(reviewId) {
+      try {
+        await apiRequest(`/api/admin/reviews/${reviewId}`, { method: 'PUT', body: { status: 'approved' } });
+        state.newlyCreatedReviewIds.add(reviewId);
+        motion.launchConfetti();
+        showToast('อนุมัติรีวิวขึ้นหน้าโปรไฟล์แล้ว', 'success');
+        await refreshAdminData();
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    }
+
+    function handleBulkApproveAll() {
+      const pendingList = state.allAdminReviews.filter(r => r.status === 'pending');
+      if (pendingList.length === 0) return;
+
+      openConfirmDialog(
+        'อนุมัติรีวิวทั้งหมด',
+        `คุณต้องการอนุมัติรีวิวที่รออนุมัติทั้งหมด ${pendingList.length} รายการขึ้นหน้าโปรไฟล์ร้านค้าพร้อมกันใช่หรือไม่?`,
+        async () => {
+          try {
+            await Promise.all(
+              pendingList.map(r => apiRequest(`/api/admin/reviews/${r.id}`, { method: 'PUT', body: { status: 'approved' } }))
+            );
+            pendingList.forEach(r => state.newlyCreatedReviewIds.add(r.id));
+            motion.launchConfetti();
+            showToast(`อนุมัติรีวิวทั้งหมด ${pendingList.length} รายการเรียบร้อยแล้ว`, 'success');
+            await refreshAdminData();
+          } catch (err) {
+            showToast(err.message, 'error');
+          }
+        }
+      );
+    }
+
+    async function handleHideReview(reviewId) {
+      try {
+        await apiRequest(`/api/admin/reviews/${reviewId}`, { method: 'PUT', body: { status: 'pending' } });
+        showToast('ซ่อนรีวิวชั่วคราว (ย้ายไปยังคิวรออนุมัติ)', 'info');
+        await refreshAdminData();
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    }
+
+    async function handleSaveAdminReply(reviewId) {
+      const input = document.getElementById(`replyInput_${reviewId}`);
+      if (!input) return;
+      try {
+        await apiRequest(`/api/admin/reviews/${reviewId}`, { method: 'PUT', body: { adminReply: input.value.trim() } });
+        showToast('บันทึกคำตอบกลับจากร้านค้าแล้ว', 'success');
+        await refreshAdminData();
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    }
+
+    async function handleClearAdminReply(reviewId) {
+      try {
+        await apiRequest(`/api/admin/reviews/${reviewId}`, { method: 'PUT', body: { adminReply: '' } });
+        showToast('ลบข้อความตอบกลับเรียบร้อยแล้ว', 'info');
+        await refreshAdminData();
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    }
+
+    function confirmDeleteReview(reviewId) {
+      openConfirmDialog(
+        'ลบรายการรีวิว',
+        'คุณต้องการลบรีวิวนี้ถาวรใช่หรือไม่? การกระทำนี้ไม่สามารถย้อนกลับได้',
+        async () => {
+          try {
+            await apiRequest(`/api/admin/reviews/${reviewId}`, { method: 'DELETE' });
+            showToast('ลบรีวิวเรียบร้อยแล้ว', 'info');
+            await refreshAdminData();
+          } catch (err) {
+            showToast(err.message, 'error');
+          }
+        }
+      );
+    }
+
+    async function toggleAutoApproveSetting(isChecked) {
+      try {
+        await apiRequest('/api/admin/settings', { method: 'PUT', body: { autoApproveReviews: isChecked } });
+        state.settings.autoApproveReviews = isChecked;
+        showToast(isChecked ? 'เปิดโหมดเผยแพร่รีวิวใหม่ทันทีแล้ว' : 'เปลี่ยนเป็นโหมดตรวจสอบรีวิวก่อนเผยแพร่', 'info');
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    }
+
+    async function handleSaveCategories(event) {
+      event.preventDefault();
+      syncCatDrafts();
+      try {
+        await apiRequest('/api/admin/categories', {
+          method: 'PUT',
+          body: { categories: state.catDrafts, fallbackCategoryId: state.catDrafts[0].id },
+        });
+        showToast('บันทึกการตั้งค่าหมวดหมู่เรียบร้อยแล้ว', 'success');
+        await refreshAdminData();
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    }
+
+    async function handleSaveShopProfile(event) {
+      event.preventDefault();
+      try {
+        const updates = {
+          name: document.getElementById('adminShopName').value.trim(),
+          badgeTag: document.getElementById('adminShopBadge').value.trim(),
+          description: document.getElementById('adminShopDesc').value.trim(),
+          statusText: document.getElementById('adminShopStatus').value.trim(),
+          responseText: document.getElementById('adminShopResponse').value.trim(),
+          coverImage: document.getElementById('adminShopCoverUrl').value.trim(),
+          avatarImage: document.getElementById('adminShopAvatarUrl').value.trim(),
+        };
+        await apiRequest('/api/admin/profile', { method: 'PUT', body: updates });
+        state.shopProfile = updates;
+        renderShopProfile();
+        showToast('อัปเดตโปรไฟล์ร้านค้าเรียบร้อยแล้ว', 'success');
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    }
+
+    async function handleChangeAdminPassword(event) {
+      event.preventDefault();
+      const newPwd = document.getElementById('newAdminPasscodeInput').value;
+      try {
+        await apiRequest('/api/admin/settings', { method: 'PUT', body: { newPasscode: newPwd } });
+        document.getElementById('newAdminPasscodeInput').value = '';
+        showToast('เปลี่ยนรหัสผ่าน Admin สำเร็จแล้ว', 'success');
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    }
+
+    function handleExportBackupJson() {
+      const backupPayload = {
+        exportedAt: new Date().toISOString(),
+        shopProfile: state.shopProfile,
+        categories: state.categories,
+        reviews: state.allAdminReviews,
+        settings: state.settings,
+      };
+      const blob = new Blob([JSON.stringify(backupPayload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `kumo-reviews-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('ดาวน์โหลดไฟล์สำรองข้อมูลเรียบร้อยแล้ว', 'success');
+    }
+
+    function handleImportBackupJson(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          if (!parsed.categories || !Array.isArray(parsed.categories)) {
+            throw new Error('รูปแบบไฟล์สำรองข้อมูลไม่ถูกต้อง');
+          }
+          openConfirmDialog(
+            'นำเข้าข้อมูลจากไฟล์สำรอง',
+            'ระบบจะอัปเดตข้อมูลร้านค้าและหมวดหมู่จากไฟล์ที่เลือก ต้องการดำเนินการต่อหรือไม่?',
+            async () => {
+              try {
+                if (parsed.shopProfile) {
+                  await apiRequest('/api/admin/profile', { method: 'PUT', body: parsed.shopProfile });
+                }
+                if (parsed.categories.length > 0) {
+                  await apiRequest('/api/admin/categories', {
+                    method: 'PUT',
+                    body: { categories: parsed.categories, fallbackCategoryId: parsed.categories[0].id },
+                  });
+                }
+                showToast('นำเข้าข้อมูลสำรองสำเร็จแล้ว', 'success');
+                await refreshAdminData();
+              } catch (err) {
+                showToast(err.message, 'error');
+              }
+            }
+          );
+        } catch (err) {
+          showToast(err.message || 'ไม่สามารถอ่านไฟล์ JSON ได้', 'error');
+        }
+      };
+      reader.readAsText(file);
+      event.target.value = '';
+    }
+
+    /**
+     * 11. UI HELPERS (CUSTOM SPRING CONFIRM, LIGHTBOX, CLIPBOARD, TOASTS)
+     */
+    function openConfirmDialog(title, message, onConfirm) {
+      const modal = document.getElementById('confirmDialogModal');
+      const card = document.getElementById('confirmDialogCard');
+      document.getElementById('confirmDialogTitle').textContent = title;
+      document.getElementById('confirmDialogMessage').textContent = message;
+
+      const cancelBtn = document.getElementById('confirmDialogCancelBtn');
+      const okBtn = document.getElementById('confirmDialogOkBtn');
+
+      const cleanup = () => motion.closeModalWithSpring(modal, card);
+      cancelBtn.onclick = cleanup;
+      okBtn.onclick = async () => {
+        cleanup();
+        await onConfirm();
+      };
+
+      motion.openModalWithSpring(modal, card);
+    }
+
+    function openImageLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      motion.openModalWithSpring(document.getElementById('imageLightboxModal'), document.getElementById('imageLightboxCard'));
+    }
+
+    function closeImageLightbox() {
+      motion.closeModalWithSpring(document.getElementById('imageLightboxModal'), document.getElementById('imageLightboxCard'));
+    }
+
+    function copyShopShareLink() {
+      const tempInput = document.createElement('input');
+      tempInput.value = window.location.href;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast('คัดลอกลิงก์หน้าโปรไฟล์ร้านค้าแล้ว', 'success');
+      } catch {
+        showToast('พร้อมแชร์ลิงก์หน้าโปรไฟล์ร้านค้าแล้ว', 'info');
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+
+      const styles = {
+        success: 'bg-white/95 border-[#D2EEE2] text-[#29263B]',
+        error: 'bg-white/95 border-rose-200 text-rose-700',
+        info: 'bg-white/95 border-[#E8E1FA] text-[#29263B]',
+      };
+      const icons = {
+        success: '<span class="w-6 h-6 rounded-full bg-[#D2EEE2] text-emerald-700 flex items-center justify-center shrink-0"><span class="material-symbols-rounded text-[16px]">check</span></span>',
+        error: '<span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center shrink-0"><span class="material-symbols-rounded text-[16px]">priority_high</span></span>',
+        info: '<span class="w-6 h-6 rounded-full bg-[#FFD8E8] text-[#C8527D] flex items-center justify-center shrink-0"><span class="material-symbols-rounded text-[16px] g-icon-fill">auto_awesome</span></span>',
+      };
+
+      toast.className = `pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-2xl border shadow-pastel-md backdrop-blur-xl text-xs sm:text-sm font-medium modal-spring-enter ${styles[type] || styles.info}`;
+      toast.innerHTML = `${icons[type] || icons.info}<span>${escapeHtml(message)}</span>`;
+
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(-6px) scale(0.96)';
+        toast.style.transition = 'all 0.25s ease';
+        setTimeout(() => toast.remove(), 260);
+      }, 3400);
+    }
+
+    function escapeHtml(str) {
+      if (str == null) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function escapeAttr(str) {
+      return escapeHtml(str);
+    }
+
+    window.onload = initApp;
+  </script>
+</body>
+</html>
